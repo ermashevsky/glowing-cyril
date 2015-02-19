@@ -45,6 +45,11 @@
                     $.each(obj_data, function (i, val) {
                         // console.info(obj_data[i].selector);
                         // console.info(obj_data[i].price);
+                        if($.trim( $('td#' + obj_data[i].selector).text())){
+                            $('td#' + obj_data[i].selector).css('background-color', 'red');
+                        }
+                         
+
                         $('td#' + obj_data[i].selector).append(obj_data[i].price);
                     });
                 }
