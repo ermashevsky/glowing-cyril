@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+from sqlalchemy import create_engine, Column, Integer, String, func, Unicode
+
+query = '''
+    SELECT `PhoneCode`.`Region` FROM PhoneCode,Logs
+WHERE 73433452383 like concat(`PhoneCode`.`PhoneCode`, `%`)
+order by (char_length(`PhoneCode`.`PhoneCode`)) desc limit 1
+    '''
+    connection = engine.connect()
+    result = connection.execute(query)
+
+    for row in result:
+        print format % tuple(row)

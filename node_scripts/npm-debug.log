@@ -1,0 +1,1440 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'elasticsearch' ]
+2 info using npm@1.1.59
+3 info using node@v0.8.8
+4 verbose read json /usr/local/lib/package.json
+5 verbose read json /usr/local/lib/package.json
+6 verbose cache add [ 'elasticsearch', null ]
+7 silly cache add name=undefined spec="elasticsearch" args=["elasticsearch",null]
+8 verbose parsed url { pathname: 'elasticsearch',
+8 verbose parsed url   path: 'elasticsearch',
+8 verbose parsed url   href: 'elasticsearch' }
+9 silly lockFile 916e8b4b-elasticsearch elasticsearch
+10 verbose lock elasticsearch /home/denic/.npm/916e8b4b-elasticsearch.lock
+11 silly lockFile 916e8b4b-elasticsearch elasticsearch
+12 verbose addNamed [ 'elasticsearch', '' ]
+13 verbose addNamed [ null, '' ]
+14 silly lockFile 02210436-elasticsearch elasticsearch@
+15 verbose lock elasticsearch@ /home/denic/.npm/02210436-elasticsearch.lock
+16 silly addNameRange { name: 'elasticsearch', range: '', hasData: false }
+17 verbose url raw elasticsearch
+18 verbose url resolving [ 'http://registry.npmjs.org/', './elasticsearch' ]
+19 verbose url resolved http://registry.npmjs.org/elasticsearch
+20 info retry registry request attempt 1 at 12:40:17
+21 verbose etag "92VG2ULACRAKN8VPQ5Z4TE4JL"
+22 http GET http://registry.npmjs.org/elasticsearch
+23 http 304 http://registry.npmjs.org/elasticsearch
+24 silly registry.get cb [ 304,
+24 silly registry.get   { date: 'Thu, 09 Oct 2014 08:40:17 GMT',
+24 silly registry.get     via: '1.1 varnish',
+24 silly registry.get     'last-modified': 'Thu, 09 Oct 2014 08:40:18 GMT',
+24 silly registry.get     'cache-control': 'max-age=60',
+24 silly registry.get     etag: '"92VG2ULACRAKN8VPQ5Z4TE4JL"',
+24 silly registry.get     connection: 'keep-alive',
+24 silly registry.get     'x-served-by': 'cache-lcy1132-LCY',
+24 silly registry.get     'x-cache': 'MISS',
+24 silly registry.get     'x-cache-hits': '0',
+24 silly registry.get     'x-timer': 'S1412844017.613760,VS0,VE773',
+24 silly registry.get     vary: 'Accept' } ]
+25 verbose etag elasticsearch from cache
+26 silly addNameRange number 2 { name: 'elasticsearch', range: '', hasData: true }
+27 silly addNameRange versions [ 'elasticsearch',
+27 silly addNameRange   [ '1.0.0',
+27 silly addNameRange     '1.0.1',
+27 silly addNameRange     '0.2.0',
+27 silly addNameRange     '0.2.1',
+27 silly addNameRange     '0.2.2',
+27 silly addNameRange     '0.2.3',
+27 silly addNameRange     '0.2.6',
+27 silly addNameRange     '0.3.1',
+27 silly addNameRange     '0.3.10',
+27 silly addNameRange     '0.3.11',
+27 silly addNameRange     '0.3.12',
+27 silly addNameRange     '0.3.2',
+27 silly addNameRange     '0.3.3',
+27 silly addNameRange     '0.3.4',
+27 silly addNameRange     '0.3.5',
+27 silly addNameRange     '0.3.6',
+27 silly addNameRange     '0.3.7',
+27 silly addNameRange     '0.3.8',
+27 silly addNameRange     '0.3.9',
+27 silly addNameRange     '1.0.3',
+27 silly addNameRange     '1.3.0',
+27 silly addNameRange     '1.4.0',
+27 silly addNameRange     '1.5.0',
+27 silly addNameRange     '1.5.1',
+27 silly addNameRange     '1.5.2',
+27 silly addNameRange     '1.5.3',
+27 silly addNameRange     '1.5.4',
+27 silly addNameRange     '1.5.5',
+27 silly addNameRange     '1.5.6',
+27 silly addNameRange     '1.5.7',
+27 silly addNameRange     '1.5.8',
+27 silly addNameRange     '1.5.9',
+27 silly addNameRange     '1.5.10',
+27 silly addNameRange     '1.5.11',
+27 silly addNameRange     '1.5.12',
+27 silly addNameRange     '1.5.13',
+27 silly addNameRange     '1.5.14',
+27 silly addNameRange     '2.0.0',
+27 silly addNameRange     '2.1.0',
+27 silly addNameRange     '2.1.1',
+27 silly addNameRange     '2.1.2',
+27 silly addNameRange     '2.1.3',
+27 silly addNameRange     '2.1.4',
+27 silly addNameRange     '2.1.6',
+27 silly addNameRange     '2.2.0',
+27 silly addNameRange     '2.3.0',
+27 silly addNameRange     '2.3.1',
+27 silly addNameRange     '2.4.0',
+27 silly addNameRange     '2.4.1',
+27 silly addNameRange     '2.4.2',
+27 silly addNameRange     '2.4.3' ] ]
+28 verbose addNamed [ 'elasticsearch', '2.4.3' ]
+29 verbose addNamed [ '2.4.3', '2.4.3' ]
+30 silly lockFile 60be7c94-elasticsearch-2-4-3 elasticsearch@2.4.3
+31 verbose lock elasticsearch@2.4.3 /home/denic/.npm/60be7c94-elasticsearch-2-4-3.lock
+32 verbose read json /home/denic/.npm/elasticsearch/2.4.3/package/package.json
+33 silly lockFile 60be7c94-elasticsearch-2-4-3 elasticsearch@2.4.3
+34 silly lockFile 02210436-elasticsearch elasticsearch@
+35 silly resolved [ { author: { name: 'Spencer Alger' },
+35 silly resolved     name: 'elasticsearch',
+35 silly resolved     description: 'The official low-level Elasticsearch client for Node.js and the browser.',
+35 silly resolved     main: 'src/elasticsearch.js',
+35 silly resolved     homepage: 'http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/index.html',
+35 silly resolved     version: '2.4.3',
+35 silly resolved     browser:
+35 silly resolved      { './src/lib/connectors/index.js': './src/lib/connectors/browser_index.js',
+35 silly resolved        './src/lib/loggers/index.js': './src/lib/loggers/browser_index.js',
+35 silly resolved        './src/lib/apis/index.js': './src/lib/apis/browser_index.js',
+35 silly resolved        './test/mocks/server.js': './test/mocks/browser_server.js',
+35 silly resolved        lodash: './node_modules/lodash/dist/lodash.compat.js' },
+35 silly resolved     config:
+35 silly resolved      { blanket: [Object],
+35 silly resolved        supported_es_branches: [Object],
+35 silly resolved        unstable_es_branches: [Object],
+35 silly resolved        default_api_branch: '1.3' },
+35 silly resolved     devDependencies:
+35 silly resolved      { aliasify: '~1.2.4',
+35 silly resolved        async: '~0.8.0',
+35 silly resolved        blanket: '~1.1.5',
+35 silly resolved        browserify: '~2.35.1',
+35 silly resolved        'event-stream': '~3.1.0',
+35 silly resolved        'expect.js': '~0.2.0',
+35 silly resolved        express: '~3.4.7',
+35 silly resolved        'find-root': '~0.1.1',
+35 silly resolved        glob: '~3.2.7',
+35 silly resolved        grunt: '~0.4.1',
+35 silly resolved        'grunt-browserify': '~1.2.11',
+35 silly resolved        'grunt-contrib-clean': '~0.5.0',
+35 silly resolved        'grunt-contrib-compress': '~0.5.3',
+35 silly resolved        'grunt-contrib-concat': '~0.3.0',
+35 silly resolved        'grunt-contrib-copy': '~0.4.1',
+35 silly resolved        'grunt-contrib-jshint': 'spenceralger/grunt-contrib-jshint',
+35 silly resolved        'grunt-contrib-uglify': '~0.2.7',
+35 silly resolved        'grunt-contrib-watch': '~0.5.3',
+35 silly resolved        'grunt-mocha-cov': '~0.2.0',
+35 silly resolved        'grunt-open': '~0.2.2',
+35 silly resolved        'grunt-prompt': '~0.1.2',
+35 silly resolved        'grunt-run': '~0.2.2',
+35 silly resolved        'grunt-s3': '~0.2.0-alpha.3',
+35 silly resolved        'grunt-saucelabs': '~8.2.0',
+35 silly resolved        jquery: '~2.1.1',
+35 silly resolved        'js-yaml': '~2.1.3',
+35 silly resolved        'load-grunt-config': '~0.7.0',
+35 silly resolved        'load-grunt-tasks': '~0.2.0',
+35 silly resolved        mocha: '~1.21.4',
+35 silly resolved        'mocha-lcov-reporter': '0.0.1',
+35 silly resolved        'mocha-screencast-reporter': '~0.1.4',
+35 silly resolved        moment: '~2.4.0',
+35 silly resolved        nock: '~0.28.3',
+35 silly resolved        open: '0.0.4',
+35 silly resolved        optimist: '~0.6.0',
+35 silly resolved        sinon: '~1.7.3',
+35 silly resolved        xmlbuilder: '~0.4.3' },
+35 silly resolved     license: 'Apache 2.0',
+35 silly resolved     dependencies:
+35 silly resolved      { bluebird: '~2.2.2',
+35 silly resolved        chalk: '~0.5.1',
+35 silly resolved        'forever-agent': '~0.5.2',
+35 silly resolved        'lodash-node': '~2.4' },
+35 silly resolved     repository:
+35 silly resolved      { type: 'git',
+35 silly resolved        url: 'http://github.com/elasticsearch/elasticsearch-js.git' },
+35 silly resolved     scripts: { test: 'grunt test', generate: 'node scripts/generate' },
+35 silly resolved     engines: { node: '>=0.8 <0.11' },
+35 silly resolved     readme: '# elasticsearch.js\n\nThe official low-level Elasticsearch client for Node.js and the browser.\n\n[![Build Status](http://img.shields.io/travis/elasticsearch/elasticsearch-js/2.4.svg?style=flat-square)](https://travis-ci.org/elasticsearch/elasticsearch-js?branch=2.4)\n[![Coverage Status](http://img.shields.io/coveralls/elasticsearch/elasticsearch-js/2.4.svg?style=flat-square)](https://coveralls.io/r/elasticsearch/elasticsearch-js?branch=2.4)\n[![Dependencies up to date](http://img.shields.io/david/elasticsearch/elasticsearch-js.svg?style=flat-square)](https://david-dm.org/elasticsearch/elasticsearch-js)\n\n## Features\n\n - One-to-one mapping with REST API and the other official clients\n - Generalized, pluggable architecture. See [Extending Core Components](http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/extending_core_components.html)\n - Configurable, automatic discovery of cluster nodes\n - Persistent, Keep-Alive connections\n - Load balancing (with pluggable selection strategy) across all available nodes.\n\n## Use in Node.js\n\n```\nnpm install elasticsearch\n```\n\nSupported node versions include 0.8, 0.10, and now 0.11\n\n[![NPM Stats](https://nodei.co/npm/elasticsearch.png?downloads=true)](https://npmjs.org/package/elasticsearch)\n\n## Use in the Browser\n\nCheck out the [Browser Builds](http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/browser-builds.html) doc page for help downloading and setting up the client for use in the browser.\n\n<table><tr>\n<td>bower:</td>\n<td colspan="2"><code>bower install elasticsearch</code></td>\n</tr><tr>\n<td>download:</td>\n<td align="center">\n<a href="https://download.elasticsearch.org/elasticsearch/elasticsearch-js/elasticsearch-js-2.4.3.zip">zip</a>\n</td>\n<td align="center">\n<a href="https://download.elasticsearch.org/elasticsearch/elasticsearch-js/elasticsearch-js-2.4.3.tar.gz">tar.gz</a>\n</td>\n</tr>\n</table>\n\n## Docs\n - [Quick Start](http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/quick-start.html)\n - [Browser Builds](http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/browser-builds.html)\n - [API](http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/api-reference.html)\n - [Configuration](http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/configuration.html)\n - [Development/Contributing](https://github.com/elasticsearch/elasticsearch-js/blob/master/CONTRIBUTING.md)\n - [Extending Core Components](http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/extending_core_components.html)\n - [Logging](http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/logging.html)\n\n## Supported Elasticsearch Versions\n\n[![Supporting Elasticsearch Version 0.90 to 1.3](http://img.shields.io/badge/elasticsearch-0.90--1.3-green.svg?style=flat-square)](http://build-eu-1.elasticsearch.com/job/es-js_nightly/)\n\nElasticsearch.js provides support for, and is regularly tested against, Elasticsearch releases 0.90.12 and greater. We also test against the latest changes in several branches in the Elasticsearch repository. To tell the client which version of Elastisearch you are using, and therefore the API it should provide, set the `apiVersion` config param. [More info](http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/configuration.html#_config_options)\n\n## Examples\n\nCreate a client instance\n```js\nvar elasticsearch = require(\'elasticsearch\');\nvar client = new elasticsearch.Client({\n  host: \'localhost:9200\',\n  log: \'trace\'\n});\n```\n\nSend a HEAD request to `/?hello=elasticsearch` and allow up to 1 second for it to complete.\n```js\nclient.ping({\n  // ping usually has a 100ms timeout\n  requestTimeout: 1000,\n\n  // undocumented params are appended to the query string\n  hello: "elasticsearch!"\n}, function (error) {\n  if (error) {\n    console.trace(\'elasticsearch cluster is down!\');\n  } else {\n    console.log(\'All is well\');\n  }\n});\n```\n\nSkip the callback to get a promise back\n```js\nclient.search({\n  q: \'pants\'\n}).then(function (body) {\n  var hits = body.hits.hits;\n}, function (error) {\n  console.trace(error.message);\n});\n```\n\nFind tweets that have "elasticsearch" in their body field\n```js\nclient.search({\n  index: \'twitter\',\n  type: \'tweets\',\n  body: {\n    query: {\n      match: {\n        body: \'elasticsearch\'\n      }\n    }\n  }\n}).then(function (resp) {\n    var hits = resp.hits.hits;\n}, function (err) {\n    console.trace(err.message);\n});\n```\n\nMore examples and detailed information about each method are available [here](http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/index.html)\n\n## License\n\nThis software is licensed under the Apache 2 license, quoted below.\n\n    Copyright (c) 2014 Elasticsearch <http://www.elasticsearch.org>\n\n    Licensed under the Apache License, Version 2.0 (the "License");\n    you may not use this file except in compliance with the License.\n    You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing, software\n    distributed under the License is distributed on an "AS IS" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    See the License for the specific language governing permissions and\n    limitations under the License.\n',
+35 silly resolved     _id: 'elasticsearch@2.4.3',
+35 silly resolved     _from: 'elasticsearch' } ]
+36 info install elasticsearch@2.4.3 into /usr/local/lib
+37 info installOne elasticsearch@2.4.3
+38 verbose from cache /home/denic/.npm/elasticsearch/2.4.3/package/package.json
+39 info /usr/local/lib/node_modules/elasticsearch unbuild
+40 verbose read json /usr/local/lib/node_modules/elasticsearch/package.json
+41 verbose tar unpack /home/denic/.npm/elasticsearch/2.4.3/package.tgz
+42 silly lockFile 5401d6fd-l-lib-node-modules-elasticsearch /usr/local/lib/node_modules/elasticsearch
+43 verbose lock /usr/local/lib/node_modules/elasticsearch /home/denic/.npm/5401d6fd-l-lib-node-modules-elasticsearch.lock
+44 silly gunzTarPerm modes [ '777', '666' ]
+45 silly gunzTarPerm extractEntry package.json
+46 silly gunzTarPerm extractEntry .npmignore
+47 silly gunzTarPerm extractEntry README.md
+48 silly gunzTarPerm extractEntry LICENSE
+49 silly gunzTarPerm extractEntry src/elasticsearch.jquery.js
+50 silly gunzTarPerm extractEntry src/elasticsearch.js
+51 silly gunzTarPerm extractEntry src/elasticsearch.angular.js
+52 silly gunzTarPerm extractEntry src/lib/connection_pool.js
+53 silly gunzTarPerm extractEntry src/lib/transport.js
+54 silly gunzTarPerm extractEntry src/lib/host.js
+55 silly gunzTarPerm extractEntry src/lib/log.js
+56 silly gunzTarPerm extractEntry src/lib/client_action.js
+57 silly gunzTarPerm extractEntry src/lib/logger.js
+58 silly gunzTarPerm extractEntry src/lib/nodes_to_host.js
+59 silly gunzTarPerm extractEntry src/lib/errors.js
+60 silly gunzTarPerm extractEntry src/lib/connection.js
+61 silly gunzTarPerm extractEntry src/lib/client.js
+62 silly gunzTarPerm extractEntry src/lib/utils.js
+63 silly gunzTarPerm extractEntry src/lib/connectors/http.js
+64 silly gunzTarPerm extractEntry src/lib/connectors/jquery.js
+65 silly gunzTarPerm extractEntry src/lib/connectors/browser_index.js
+66 silly gunzTarPerm extractEntry src/lib/connectors/_custom_agent.js
+67 silly gunzTarPerm extractEntry src/lib/connectors/angular.js
+68 silly gunzTarPerm extractEntry src/lib/connectors/index.js
+69 silly gunzTarPerm extractEntry src/lib/connectors/xhr.js
+70 silly gunzTarPerm extractEntry src/lib/serializers/json.js
+71 silly gunzTarPerm extractEntry src/lib/apis/1_x.js
+72 silly gunzTarPerm extractEntry src/lib/apis/browser_index.js
+73 silly gunzTarPerm extractEntry src/lib/apis/1_2.js
+74 silly gunzTarPerm extractEntry src/lib/apis/0_90.js
+75 silly gunzTarPerm extractEntry src/lib/apis/master.js
+76 silly gunzTarPerm extractEntry src/lib/apis/index.js
+77 silly gunzTarPerm extractEntry src/lib/apis/1_1.js
+78 silly gunzTarPerm extractEntry src/lib/apis/1_0.js
+79 silly gunzTarPerm extractEntry src/lib/apis/1_3.js
+80 silly gunzTarPerm extractEntry src/lib/transport/sniff_on_connection_fault.js
+81 silly gunzTarPerm extractEntry src/lib/loggers/stream.js
+82 silly gunzTarPerm extractEntry src/lib/loggers/browser_index.js
+83 silly gunzTarPerm extractEntry src/lib/loggers/tracer.js
+84 silly gunzTarPerm extractEntry src/lib/loggers/stdio.js
+85 silly gunzTarPerm extractEntry src/lib/loggers/index.js
+86 silly gunzTarPerm extractEntry src/lib/loggers/file.js
+87 silly gunzTarPerm extractEntry src/lib/loggers/console.js
+88 silly gunzTarPerm extractEntry src/lib/selectors/round_robin.js
+89 silly gunzTarPerm extractEntry src/lib/selectors/index.js
+90 silly gunzTarPerm extractEntry src/lib/selectors/random.js
+91 verbose read json /usr/local/lib/node_modules/elasticsearch/package.json
+92 silly lockFile 5401d6fd-l-lib-node-modules-elasticsearch /usr/local/lib/node_modules/elasticsearch
+93 info preinstall elasticsearch@2.4.3
+94 verbose from cache /usr/local/lib/node_modules/elasticsearch/package.json
+95 verbose readDependencies using package.json deps
+96 verbose from cache /usr/local/lib/node_modules/elasticsearch/package.json
+97 verbose readDependencies using package.json deps
+98 verbose cache add [ 'bluebird@~2.2.2', null ]
+99 silly cache add name=undefined spec="bluebird@~2.2.2" args=["bluebird@~2.2.2",null]
+100 verbose parsed url { pathname: 'bluebird@~2.2.2',
+100 verbose parsed url   path: 'bluebird@~2.2.2',
+100 verbose parsed url   href: 'bluebird@~2.2.2' }
+101 silly cache add name="bluebird" spec="~2.2.2" args=["bluebird","~2.2.2"]
+102 verbose parsed url { pathname: '~2.2.2', path: '~2.2.2', href: '~2.2.2' }
+103 verbose addNamed [ 'bluebird', '~2.2.2' ]
+104 verbose addNamed [ null, '>=2.2.2- <2.3.0-' ]
+105 silly lockFile 6b084acc-bluebird-2-2-2 bluebird@~2.2.2
+106 verbose lock bluebird@~2.2.2 /home/denic/.npm/6b084acc-bluebird-2-2-2.lock
+107 verbose cache add [ 'chalk@~0.5.1', null ]
+108 silly cache add name=undefined spec="chalk@~0.5.1" args=["chalk@~0.5.1",null]
+109 verbose parsed url { pathname: 'chalk@~0.5.1',
+109 verbose parsed url   path: 'chalk@~0.5.1',
+109 verbose parsed url   href: 'chalk@~0.5.1' }
+110 silly cache add name="chalk" spec="~0.5.1" args=["chalk","~0.5.1"]
+111 verbose parsed url { pathname: '~0.5.1', path: '~0.5.1', href: '~0.5.1' }
+112 verbose addNamed [ 'chalk', '~0.5.1' ]
+113 verbose addNamed [ null, '>=0.5.1- <0.6.0-' ]
+114 silly lockFile b5efb621-chalk-0-5-1 chalk@~0.5.1
+115 verbose lock chalk@~0.5.1 /home/denic/.npm/b5efb621-chalk-0-5-1.lock
+116 verbose cache add [ 'forever-agent@~0.5.2', null ]
+117 silly cache add name=undefined spec="forever-agent@~0.5.2" args=["forever-agent@~0.5.2",null]
+118 verbose parsed url { pathname: 'forever-agent@~0.5.2',
+118 verbose parsed url   path: 'forever-agent@~0.5.2',
+118 verbose parsed url   href: 'forever-agent@~0.5.2' }
+119 silly cache add name="forever-agent" spec="~0.5.2" args=["forever-agent","~0.5.2"]
+120 verbose parsed url { pathname: '~0.5.2', path: '~0.5.2', href: '~0.5.2' }
+121 verbose addNamed [ 'forever-agent', '~0.5.2' ]
+122 verbose addNamed [ null, '>=0.5.2- <0.6.0-' ]
+123 silly lockFile 993ed0c1-forever-agent-0-5-2 forever-agent@~0.5.2
+124 verbose lock forever-agent@~0.5.2 /home/denic/.npm/993ed0c1-forever-agent-0-5-2.lock
+125 silly addNameRange { name: 'bluebird', range: '>=2.2.2- <2.3.0-', hasData: false }
+126 silly addNameRange { name: 'chalk', range: '>=0.5.1- <0.6.0-', hasData: false }
+127 silly addNameRange { name: 'forever-agent',
+127 silly addNameRange   range: '>=0.5.2- <0.6.0-',
+127 silly addNameRange   hasData: false }
+128 verbose url raw chalk
+129 verbose url resolving [ 'http://registry.npmjs.org/', './chalk' ]
+130 verbose url resolved http://registry.npmjs.org/chalk
+131 info retry registry request attempt 1 at 12:40:18
+132 verbose etag "BDPIVRG3S7XRTP19LX0NYN03W"
+133 http GET http://registry.npmjs.org/chalk
+134 verbose url raw bluebird
+135 verbose url resolving [ 'http://registry.npmjs.org/', './bluebird' ]
+136 verbose url resolved http://registry.npmjs.org/bluebird
+137 info retry registry request attempt 1 at 12:40:18
+138 verbose etag "4411PEK4R423JX532PF78727B"
+139 http GET http://registry.npmjs.org/bluebird
+140 verbose url raw forever-agent
+141 verbose url resolving [ 'http://registry.npmjs.org/', './forever-agent' ]
+142 verbose url resolved http://registry.npmjs.org/forever-agent
+143 info retry registry request attempt 1 at 12:40:18
+144 verbose etag "CS3QCFMU9C00YDD7Z571FJ3IV"
+145 http GET http://registry.npmjs.org/forever-agent
+146 verbose cache add [ 'lodash-node@~2.4', null ]
+147 silly cache add name=undefined spec="lodash-node@~2.4" args=["lodash-node@~2.4",null]
+148 verbose parsed url { pathname: 'lodash-node@~2.4',
+148 verbose parsed url   path: 'lodash-node@~2.4',
+148 verbose parsed url   href: 'lodash-node@~2.4' }
+149 silly cache add name="lodash-node" spec="~2.4" args=["lodash-node","~2.4"]
+150 verbose parsed url { pathname: '~2.4', path: '~2.4', href: '~2.4' }
+151 verbose addNamed [ 'lodash-node', '~2.4' ]
+152 verbose addNamed [ null, '>=2.4.0- <2.5.0-' ]
+153 silly lockFile 494e4e5e-lodash-node-2-4 lodash-node@~2.4
+154 verbose lock lodash-node@~2.4 /home/denic/.npm/494e4e5e-lodash-node-2-4.lock
+155 silly addNameRange { name: 'lodash-node',
+155 silly addNameRange   range: '>=2.4.0- <2.5.0-',
+155 silly addNameRange   hasData: false }
+156 verbose url raw lodash-node
+157 verbose url resolving [ 'http://registry.npmjs.org/', './lodash-node' ]
+158 verbose url resolved http://registry.npmjs.org/lodash-node
+159 info retry registry request attempt 1 at 12:40:18
+160 verbose etag "23R2E32SNQHGJSHIHGDFQYJFH"
+161 http GET http://registry.npmjs.org/lodash-node
+162 http 304 http://registry.npmjs.org/chalk
+163 silly registry.get cb [ 304,
+163 silly registry.get   { date: 'Thu, 09 Oct 2014 08:40:18 GMT',
+163 silly registry.get     via: '1.1 varnish',
+163 silly registry.get     'last-modified': 'Thu, 09 Oct 2014 08:40:18 GMT',
+163 silly registry.get     'cache-control': 'max-age=60',
+163 silly registry.get     etag: '"BDPIVRG3S7XRTP19LX0NYN03W"',
+163 silly registry.get     connection: 'keep-alive',
+163 silly registry.get     'x-served-by': 'cache-lcy1124-LCY',
+163 silly registry.get     'x-cache': 'HIT',
+163 silly registry.get     'x-cache-hits': '1',
+163 silly registry.get     'x-timer': 'S1412844018.748033,VS0,VE0',
+163 silly registry.get     vary: 'Accept' } ]
+164 verbose etag chalk from cache
+165 http 304 http://registry.npmjs.org/forever-agent
+166 silly registry.get cb [ 304,
+166 silly registry.get   { date: 'Thu, 09 Oct 2014 08:40:18 GMT',
+166 silly registry.get     via: '1.1 varnish',
+166 silly registry.get     'last-modified': 'Thu, 09 Oct 2014 08:40:18 GMT',
+166 silly registry.get     'cache-control': 'max-age=60',
+166 silly registry.get     etag: '"CS3QCFMU9C00YDD7Z571FJ3IV"',
+166 silly registry.get     connection: 'keep-alive',
+166 silly registry.get     'x-served-by': 'cache-lcy1121-LCY',
+166 silly registry.get     'x-cache': 'HIT',
+166 silly registry.get     'x-cache-hits': '1',
+166 silly registry.get     'x-timer': 'S1412844018.751507,VS0,VE0',
+166 silly registry.get     vary: 'Accept' } ]
+167 verbose etag forever-agent from cache
+168 http 304 http://registry.npmjs.org/lodash-node
+169 silly registry.get cb [ 304,
+169 silly registry.get   { date: 'Thu, 09 Oct 2014 08:40:18 GMT',
+169 silly registry.get     via: '1.1 varnish',
+169 silly registry.get     'last-modified': 'Thu, 09 Oct 2014 08:40:18 GMT',
+169 silly registry.get     'cache-control': 'max-age=60',
+169 silly registry.get     etag: '"23R2E32SNQHGJSHIHGDFQYJFH"',
+169 silly registry.get     connection: 'keep-alive',
+169 silly registry.get     'x-served-by': 'cache-lcy1132-LCY',
+169 silly registry.get     'x-cache': 'HIT',
+169 silly registry.get     'x-cache-hits': '1',
+169 silly registry.get     'x-timer': 'S1412844018.752874,VS0,VE0',
+169 silly registry.get     vary: 'Accept' } ]
+170 verbose etag lodash-node from cache
+171 silly addNameRange number 2 { name: 'chalk', range: '>=0.5.1- <0.6.0-', hasData: true }
+172 silly addNameRange versions [ 'chalk',
+172 silly addNameRange   [ '0.1.0',
+172 silly addNameRange     '0.1.1',
+172 silly addNameRange     '0.2.0',
+172 silly addNameRange     '0.2.1',
+172 silly addNameRange     '0.3.0',
+172 silly addNameRange     '0.4.0',
+172 silly addNameRange     '0.5.0',
+172 silly addNameRange     '0.5.1' ] ]
+173 verbose addNamed [ 'chalk', '0.5.1' ]
+174 verbose addNamed [ '0.5.1', '0.5.1' ]
+175 silly lockFile c28973bb-chalk-0-5-1 chalk@0.5.1
+176 verbose lock chalk@0.5.1 /home/denic/.npm/c28973bb-chalk-0-5-1.lock
+177 verbose read json /home/denic/.npm/chalk/0.5.1/package/package.json
+178 silly addNameRange number 2 { name: 'forever-agent',
+178 silly addNameRange   range: '>=0.5.2- <0.6.0-',
+178 silly addNameRange   hasData: true }
+179 silly addNameRange versions [ 'forever-agent',
+179 silly addNameRange   [ '0.2.0', '0.3.0', '0.4.0', '0.5.0', '0.5.2' ] ]
+180 verbose addNamed [ 'forever-agent', '0.5.2' ]
+181 verbose addNamed [ '0.5.2', '0.5.2' ]
+182 silly lockFile 20c7a74d-forever-agent-0-5-2 forever-agent@0.5.2
+183 verbose lock forever-agent@0.5.2 /home/denic/.npm/20c7a74d-forever-agent-0-5-2.lock
+184 silly addNameRange number 2 { name: 'lodash-node', range: '>=2.4.0- <2.5.0-', hasData: true }
+185 silly addNameRange versions [ 'lodash-node',
+185 silly addNameRange   [ '2.0.0', '2.1.0', '2.2.0', '2.2.1', '2.3.0', '2.4.0', '2.4.1' ] ]
+186 verbose addNamed [ 'lodash-node', '2.4.1' ]
+187 verbose addNamed [ '2.4.1', '2.4.1' ]
+188 silly lockFile 624dae70-lodash-node-2-4-1 lodash-node@2.4.1
+189 verbose lock lodash-node@2.4.1 /home/denic/.npm/624dae70-lodash-node-2-4-1.lock
+190 verbose read json /home/denic/.npm/forever-agent/0.5.2/package/package.json
+191 verbose read json /home/denic/.npm/lodash-node/2.4.1/package/package.json
+192 silly lockFile c28973bb-chalk-0-5-1 chalk@0.5.1
+193 silly lockFile b5efb621-chalk-0-5-1 chalk@~0.5.1
+194 silly lockFile 20c7a74d-forever-agent-0-5-2 forever-agent@0.5.2
+195 silly lockFile 624dae70-lodash-node-2-4-1 lodash-node@2.4.1
+196 silly lockFile 993ed0c1-forever-agent-0-5-2 forever-agent@~0.5.2
+197 silly lockFile 494e4e5e-lodash-node-2-4 lodash-node@~2.4
+198 http 304 http://registry.npmjs.org/bluebird
+199 silly registry.get cb [ 304,
+199 silly registry.get   { date: 'Thu, 09 Oct 2014 08:40:18 GMT',
+199 silly registry.get     via: '1.1 varnish',
+199 silly registry.get     'last-modified': 'Thu, 09 Oct 2014 08:40:18 GMT',
+199 silly registry.get     'cache-control': 'max-age=60',
+199 silly registry.get     etag: '"4411PEK4R423JX532PF78727B"',
+199 silly registry.get     connection: 'keep-alive',
+199 silly registry.get     'x-served-by': 'cache-lcy1130-LCY',
+199 silly registry.get     'x-cache': 'HIT',
+199 silly registry.get     'x-cache-hits': '1',
+199 silly registry.get     'x-timer': 'S1412844018.747468,VS0,VE83',
+199 silly registry.get     vary: 'Accept' } ]
+200 verbose etag bluebird from cache
+201 silly addNameRange number 2 { name: 'bluebird', range: '>=2.2.2- <2.3.0-', hasData: true }
+202 silly addNameRange versions [ 'bluebird',
+202 silly addNameRange   [ '0.7.1-1',
+202 silly addNameRange     '0.7.1-2',
+202 silly addNameRange     '0.7.1-3',
+202 silly addNameRange     '0.7.1-4',
+202 silly addNameRange     '0.7.1-5',
+202 silly addNameRange     '0.7.2-0',
+202 silly addNameRange     '0.7.3-0',
+202 silly addNameRange     '0.7.4-0',
+202 silly addNameRange     '0.7.4-1',
+202 silly addNameRange     '0.7.5-0',
+202 silly addNameRange     '0.7.6-0',
+202 silly addNameRange     '0.7.7-0',
+202 silly addNameRange     '0.7.7-1',
+202 silly addNameRange     '0.7.8-0',
+202 silly addNameRange     '0.7.8-1',
+202 silly addNameRange     '0.7.9-0',
+202 silly addNameRange     '0.7.9-1',
+202 silly addNameRange     '0.7.10-0',
+202 silly addNameRange     '0.7.10-1',
+202 silly addNameRange     '0.7.11-0',
+202 silly addNameRange     '0.7.12-0',
+202 silly addNameRange     '0.7.12-1',
+202 silly addNameRange     '0.7.12-2',
+202 silly addNameRange     '0.8.0-0',
+202 silly addNameRange     '0.8.0-1',
+202 silly addNameRange     '0.8.0-2',
+202 silly addNameRange     '0.8.0-3',
+202 silly addNameRange     '0.8.1-0',
+202 silly addNameRange     '0.8.2-0',
+202 silly addNameRange     '0.8.2-1',
+202 silly addNameRange     '0.8.2-2',
+202 silly addNameRange     '0.8.3-0',
+202 silly addNameRange     '0.8.3-1',
+202 silly addNameRange     '0.8.3-2',
+202 silly addNameRange     '0.8.3-3',
+202 silly addNameRange     '0.8.4-0',
+202 silly addNameRange     '0.8.4-1',
+202 silly addNameRange     '0.8.5-0',
+202 silly addNameRange     '0.8.5-1',
+202 silly addNameRange     '0.9.0-0',
+202 silly addNameRange     '0.9.1-0',
+202 silly addNameRange     '0.9.1-1',
+202 silly addNameRange     '0.9.2-0',
+202 silly addNameRange     '0.9.2-1',
+202 silly addNameRange     '0.9.3-0',
+202 silly addNameRange     '0.9.4-0',
+202 silly addNameRange     '0.9.4-1',
+202 silly addNameRange     '0.9.5-0',
+202 silly addNameRange     '0.9.6-0',
+202 silly addNameRange     '0.9.7-0',
+202 silly addNameRange     '0.9.8-0',
+202 silly addNameRange     '0.9.9-0',
+202 silly addNameRange     '0.9.10-0',
+202 silly addNameRange     '0.9.10-1',
+202 silly addNameRange     '0.9.11-0',
+202 silly addNameRange     '0.9.11-1',
+202 silly addNameRange     '0.10.0-0',
+202 silly addNameRange     '0.10.0-1',
+202 silly addNameRange     '0.10.1-0',
+202 silly addNameRange     '0.10.2-0',
+202 silly addNameRange     '0.10.2-1',
+202 silly addNameRange     '0.10.3-0',
+202 silly addNameRange     '0.10.4-0',
+202 silly addNameRange     '0.10.4-1',
+202 silly addNameRange     '0.10.5-0',
+202 silly addNameRange     '0.10.6-0',
+202 silly addNameRange     '0.10.7-0',
+202 silly addNameRange     '0.10.8-0',
+202 silly addNameRange     '0.10.9-0',
+202 silly addNameRange     '0.10.9-1',
+202 silly addNameRange     '0.10.10-0',
+202 silly addNameRange     '0.10.11-0',
+202 silly addNameRange     '0.10.11-1',
+202 silly addNameRange     '0.10.11-2',
+202 silly addNameRange     '0.10.11-4',
+202 silly addNameRange     '0.10.12-0',
+202 silly addNameRange     '0.10.13-0',
+202 silly addNameRange     '0.10.13-1',
+202 silly addNameRange     '0.10.14-0',
+202 silly addNameRange     '0.11.0-0',
+202 silly addNameRange     '0.11.1-0',
+202 silly addNameRange     '0.11.2-0',
+202 silly addNameRange     '0.11.3-0',
+202 silly addNameRange     '0.11.4-0',
+202 silly addNameRange     '0.11.4-1',
+202 silly addNameRange     '0.11.5-0',
+202 silly addNameRange     '0.11.5-1',
+202 silly addNameRange     '0.11.6-0',
+202 silly addNameRange     '1.0.0',
+202 silly addNameRange     '1.0.1',
+202 silly addNameRange     '1.0.2',
+202 silly addNameRange     '1.0.3',
+202 silly addNameRange     '1.0.4',
+202 silly addNameRange     '1.0.5',
+202 silly addNameRange     '1.0.7',
+202 silly addNameRange     '1.0.8',
+202 silly addNameRange     '1.1.0',
+202 silly addNameRange     '1.1.1',
+202 silly addNameRange     '1.2.0',
+202 silly addNameRange     '1.2.1',
+202 silly addNameRange     '1.2.2',
+202 silly addNameRange     '1.2.3',
+202 silly addNameRange     '1.2.4',
+202 silly addNameRange     '2.0.2',
+202 silly addNameRange     '2.0.3',
+202 silly addNameRange     '2.0.4',
+202 silly addNameRange     '2.0.5',
+202 silly addNameRange     '2.0.6',
+202 silly addNameRange     '2.0.7',
+202 silly addNameRange     '2.1.1',
+202 silly addNameRange     '2.1.2',
+202 silly addNameRange     '2.1.3',
+202 silly addNameRange     '2.2.0',
+202 silly addNameRange     '2.2.1',
+202 silly addNameRange     '2.2.2',
+202 silly addNameRange     '2.3.0',
+202 silly addNameRange     '2.3.1',
+202 silly addNameRange     '2.3.2',
+202 silly addNameRange     '2.3.3',
+202 silly addNameRange     '2.3.4',
+202 silly addNameRange     '2.3.5',
+202 silly addNameRange     '0.11.6' ] ]
+203 verbose addNamed [ 'bluebird', '2.2.2' ]
+204 verbose addNamed [ '2.2.2', '2.2.2' ]
+205 silly lockFile 731bca88-bluebird-2-2-2 bluebird@2.2.2
+206 verbose lock bluebird@2.2.2 /home/denic/.npm/731bca88-bluebird-2-2-2.lock
+207 verbose read json /home/denic/.npm/bluebird/2.2.2/package/package.json
+208 silly lockFile 731bca88-bluebird-2-2-2 bluebird@2.2.2
+209 silly lockFile 6b084acc-bluebird-2-2-2 bluebird@~2.2.2
+210 silly resolved [ { name: 'chalk',
+210 silly resolved     version: '0.5.1',
+210 silly resolved     description: 'Terminal string styling done right. Created because the `colors` module does some really horrible things.',
+210 silly resolved     license: 'MIT',
+210 silly resolved     repository: { type: 'git', url: 'sindresorhus/chalk' },
+210 silly resolved     maintainers: [ [Object], [Object] ],
+210 silly resolved     engines: { node: '>=0.10.0' },
+210 silly resolved     scripts: { test: 'mocha', bench: 'matcha benchmark.js' },
+210 silly resolved     files: [ 'index.js' ],
+210 silly resolved     keywords:
+210 silly resolved      [ 'color',
+210 silly resolved        'colour',
+210 silly resolved        'colors',
+210 silly resolved        'terminal',
+210 silly resolved        'console',
+210 silly resolved        'cli',
+210 silly resolved        'string',
+210 silly resolved        'ansi',
+210 silly resolved        'styles',
+210 silly resolved        'tty',
+210 silly resolved        'formatting',
+210 silly resolved        'rgb',
+210 silly resolved        '256',
+210 silly resolved        'shell',
+210 silly resolved        'xterm',
+210 silly resolved        'log',
+210 silly resolved        'logging',
+210 silly resolved        'command-line',
+210 silly resolved        'text' ],
+210 silly resolved     dependencies:
+210 silly resolved      { 'ansi-styles': '^1.1.0',
+210 silly resolved        'escape-string-regexp': '^1.0.0',
+210 silly resolved        'has-ansi': '^0.1.0',
+210 silly resolved        'strip-ansi': '^0.3.0',
+210 silly resolved        'supports-color': '^0.2.0' },
+210 silly resolved     devDependencies: { matcha: '^0.5.0', mocha: '*' },
+210 silly resolved     readme: '# <img width="300" src="https://cdn.rawgit.com/sindresorhus/chalk/77ae94f63ab1ac61389b190e5a59866569d1a376/logo.svg" alt="chalk">\n\n> Terminal string styling done right\n\n[![Build Status](https://travis-ci.org/sindresorhus/chalk.svg?branch=master)](https://travis-ci.org/sindresorhus/chalk)\n![](http://img.shields.io/badge/unicorn-approved-ff69b4.svg)\n\n[colors.js](https://github.com/Marak/colors.js) is currently the most popular string styling module, but it has serious deficiencies like extending String.prototype which causes all kinds of [problems](https://github.com/yeoman/yo/issues/68). Although there are other ones, they either do too much or not enough.\n\n**Chalk is a clean and focused alternative.**\n\n![screenshot](https://github.com/sindresorhus/ansi-styles/raw/master/screenshot.png)\n\n\n## Why\n\n- Highly performant\n- Doesn\'t extend String.prototype\n- Expressive API\n- Ability to nest styles\n- Clean and focused\n- Auto-detects color support\n- Actively maintained\n- [Used by 1000+ modules](https://npmjs.org/browse/depended/chalk)\n\n\n## Install\n\n```sh\n$ npm install --save chalk\n```\n\n\n## Usage\n\nChalk comes with an easy to use composable API where you just chain and nest the styles you want.\n\n```js\nvar chalk = require(\'chalk\');\n\n// style a string\nconsole.log(  chalk.blue(\'Hello world!\')  );\n\n// combine styled and normal strings\nconsole.log(  chalk.blue(\'Hello\'), \'World\' + chalk.red(\'!\')  );\n\n// compose multiple styles using the chainable API\nconsole.log(  chalk.blue.bgRed.bold(\'Hello world!\')  );\n\n// pass in multiple arguments\nconsole.log(  chalk.blue(\'Hello\', \'World!\', \'Foo\', \'bar\', \'biz\', \'baz\')  );\n\n// nest styles\nconsole.log(  chalk.red(\'Hello\', chalk.underline.bgBlue(\'world\') + \'!\')  );\n\n// nest styles of the same type even (color, underline, background)\nconsole.log(  chalk.green(\'I am a green line \' + chalk.blue(\'with a blue substring\') + \' that becomes green again!\')  );\n```\n\nEasily define your own themes.\n\n```js\nvar chalk = require(\'chalk\');\nvar error = chalk.bold.red;\nconsole.log(error(\'Error!\'));\n```\n\nTake advantage of console.log [string substitution](http://nodejs.org/docs/latest/api/console.html#console_console_log_data).\n\n```js\nvar name = \'Sindre\';\nconsole.log(chalk.green(\'Hello %s\'), name);\n//=> Hello Sindre\n```\n\n\n## API\n\n### chalk.`<style>[.<style>...](string, [string...])`\n\nExample: `chalk.red.bold.underline(\'Hello\', \'world\');`\n\nChain [styles](#styles) and call the last one as a method with a string argument. Order doesn\'t matter.\n\nMultiple arguments will be separated by space.\n\n### chalk.enabled\n\nColor support is automatically detected, but you can override it.\n\n### chalk.supportsColor\n\nDetect whether the terminal [supports color](https://github.com/sindresorhus/supports-color).\n\nCan be overridden by the user with the flags `--color` and `--no-color`.\n\nUsed internally and handled for you, but exposed for convenience.\n\n### chalk.styles\n\nExposes the styles as [ANSI escape codes](https://github.com/sindresorhus/ansi-styles).\n\nGenerally not useful, but you might need just the `.open` or `.close` escape code if you\'re mixing externally styled strings with yours.\n\n```js\nvar chalk = require(\'chalk\');\n\nconsole.log(chalk.styles.red);\n//=> {open: \'\\u001b[31m\', close: \'\\u001b[39m\'}\n\nconsole.log(chalk.styles.red.open + \'Hello\' + chalk.styles.red.close);\n```\n\n### chalk.hasColor(string)\n\nCheck whether a string [has color](https://github.com/sindresorhus/has-ansi).\n\n### chalk.stripColor(string)\n\n[Strip color](https://github.com/sindresorhus/strip-ansi) from a string.\n\nCan be useful in combination with `.supportsColor` to strip color on externally styled text when it\'s not supported.\n\nExample:\n\n```js\nvar chalk = require(\'chalk\');\nvar styledString = getText();\n\nif (!chalk.supportsColor) {\n\tstyledString = chalk.stripColor(styledString);\n}\n```\n\n\n## Styles\n\n### General\n\n- `reset`\n- `bold`\n- `dim`\n- `italic` *(not widely supported)*\n- `underline`\n- `inverse`\n- `hidden`\n- `strikethrough` *(not widely supported)*\n\n### Text colors\n\n- `black`\n- `red`\n- `green`\n- `yellow`\n- `blue`\n- `magenta`\n- `cyan`\n- `white`\n- `gray`\n\n### Background colors\n\n- `bgBlack`\n- `bgRed`\n- `bgGreen`\n- `bgYellow`\n- `bgBlue`\n- `bgMagenta`\n- `bgCyan`\n- `bgWhite`\n\n\n## License\n\nMIT © [Sindre Sorhus](http://sindresorhus.com)\n',
+210 silly resolved     _id: 'chalk@0.5.1',
+210 silly resolved     _from: 'chalk@~0.5.1' },
+210 silly resolved   { author:
+210 silly resolved      { name: 'Mikeal Rogers',
+210 silly resolved        email: 'mikeal.rogers@gmail.com',
+210 silly resolved        url: 'http://www.futurealoof.com' },
+210 silly resolved     name: 'forever-agent',
+210 silly resolved     description: 'HTTP Agent that keeps socket connections alive between keep-alive requests. Formerly part of mikeal/request, now a standalone module.',
+210 silly resolved     version: '0.5.2',
+210 silly resolved     repository: { url: 'https://github.com/mikeal/forever-agent' },
+210 silly resolved     main: 'index.js',
+210 silly resolved     dependencies: {},
+210 silly resolved     devDependencies: {},
+210 silly resolved     optionalDependencies: {},
+210 silly resolved     engines: { node: '*' },
+210 silly resolved     readme: 'forever-agent\n=============\n\nHTTP Agent that keeps socket connections alive between keep-alive requests. Formerly part of mikeal/request, now a standalone module.\n',
+210 silly resolved     _id: 'forever-agent@0.5.2',
+210 silly resolved     _from: 'forever-agent@~0.5.2' },
+210 silly resolved   { name: 'lodash-node',
+210 silly resolved     version: '2.4.1',
+210 silly resolved     description: 'A collection of Lo-Dash methods as Node.js modules generated by lodash-cli.',
+210 silly resolved     homepage: 'http://lodash.com/custom-builds',
+210 silly resolved     license: 'MIT',
+210 silly resolved     main: 'modern/index.js',
+210 silly resolved     keywords: [ 'customize', 'functional', 'lodash', 'modules', 'server', 'util' ],
+210 silly resolved     author:
+210 silly resolved      { name: 'John-David Dalton',
+210 silly resolved        email: 'john.david.dalton@gmail.com',
+210 silly resolved        url: 'http://allyoucanleet.com/' },
+210 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+210 silly resolved     bugs: 'https://github.com/lodash/lodash-cli/issues',
+210 silly resolved     repository:
+210 silly resolved      { type: 'git',
+210 silly resolved        url: 'https://github.com/lodash/lodash-node.git' },
+210 silly resolved     readme: '# lodash-node v2.4.1\n\nA collection of [Lo-Dash](http://lodash.com/) methods as [Node.js](http://nodejs.org/) modules generated by [lodash-cli](https://npmjs.org/package/lodash-cli).\n\n## Installation & usage\n\nUsing [`npm`](http://npmjs.org/):\n\n```bash\nnpm i --save lodash-node\n\n{sudo} npm i -g lodash-node\nnpm ln lodash-node\n```\n\nIn Node.js:\n\n```js\nvar _ = require(\'lodash-node\');\n\n// or as Underscore\nvar _ = require(\'lodash-node/underscore\');\n\n// or by method category\nvar collections = require(\'lodash-node/modern/collections\');\n\n// or individual methods\nvar isEqual = require(\'lodash-node/modern/objects/isEqual\');\nvar findWhere = require(\'lodash-node/underscore/collections/findWhere\');\n```\n\n## Author\n\n| [![twitter/jdalton](http://gravatar.com/avatar/299a3d891ff1920b69c364d061007043?s=70)](https://twitter.com/jdalton "Follow @jdalton on Twitter") |\n|---|\n| [John-David Dalton](http://allyoucanleet.com/) |\n\n## Contributors\n\n| [![twitter/blainebublitz](http://gravatar.com/avatar/ac1c67fd906c9fecd823ce302283b4c1?s=70)](https://twitter.com/blainebublitz "Follow @BlaineBublitz on Twitter") | [![twitter/kitcambridge](http://gravatar.com/avatar/6662a1d02f351b5ef2f8b4d815804661?s=70)](https://twitter.com/kitcambridge "Follow @kitcambridge on Twitter") | [![twitter/mathias](http://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](https://twitter.com/mathias "Follow @mathias on Twitter") |\n|---|---|---|\n| [Blaine Bublitz](http://www.iceddev.com/) | [Kit Cambridge](http://kitcambridge.be/) | [Mathias Bynens](http://mathiasbynens.be/) |\n\n[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lodash/lodash-node/trend.png)](https://bitdeli.com/free "Bitdeli Badge")\n',
+210 silly resolved     _id: 'lodash-node@2.4.1',
+210 silly resolved     _from: 'lodash-node@~2.4' },
+210 silly resolved   { name: 'bluebird',
+210 silly resolved     description: 'Full featured Promises/A+ implementation with exceptionally good performance',
+210 silly resolved     version: '2.2.2',
+210 silly resolved     keywords:
+210 silly resolved      [ 'promise',
+210 silly resolved        'performance',
+210 silly resolved        'promises',
+210 silly resolved        'promises-a',
+210 silly resolved        'promises-aplus',
+210 silly resolved        'async',
+210 silly resolved        'await',
+210 silly resolved        'deferred',
+210 silly resolved        'deferreds',
+210 silly resolved        'future',
+210 silly resolved        'flow control',
+210 silly resolved        'dsl',
+210 silly resolved        'fluent interface' ],
+210 silly resolved     scripts: { test: 'grunt test' },
+210 silly resolved     homepage: 'https://github.com/petkaantonov/bluebird',
+210 silly resolved     repository:
+210 silly resolved      { type: 'git',
+210 silly resolved        url: 'git://github.com/petkaantonov/bluebird.git' },
+210 silly resolved     bugs: { url: 'http://github.com/petkaantonov/bluebird/issues' },
+210 silly resolved     license: 'MIT',
+210 silly resolved     author:
+210 silly resolved      { name: 'Petka Antonov',
+210 silly resolved        email: 'petka_antonov@hotmail.com',
+210 silly resolved        url: 'http://github.com/petkaantonov/' },
+210 silly resolved     devDependencies:
+210 silly resolved      { grunt: '~0.4.1',
+210 silly resolved        'grunt-contrib-jshint': '~0.10.0',
+210 silly resolved        'grunt-contrib-watch': 'latest',
+210 silly resolved        'grunt-contrib-connect': 'latest',
+210 silly resolved        'grunt-contrib-concat': 'latest',
+210 silly resolved        'grunt-saucelabs': 'latest',
+210 silly resolved        acorn: '~0.6.0',
+210 silly resolved        mocha: '~1.20.1',
+210 silly resolved        q: '~1.0.1',
+210 silly resolved        when: '~3.2.3',
+210 silly resolved        deferred: '~0.7.1',
+210 silly resolved        rsvp: '~3.0.9',
+210 silly resolved        avow: '~2.0.1',
+210 silly resolved        jsdom: '~0.11.0',
+210 silly resolved        'jquery-browserify': '~1.8.1',
+210 silly resolved        sinon: '~1.7.3',
+210 silly resolved        kew: '~0.4.0',
+210 silly resolved        browserify: '~4.2.0',
+210 silly resolved        concurrent: '~0.3.2',
+210 silly resolved        'text-table': '~0.2.0',
+210 silly resolved        'grunt-cli': '~0.1.9',
+210 silly resolved        'jshint-stylish': '~0.2.0',
+210 silly resolved        'semver-utils': '~1.1.0',
+210 silly resolved        rimraf: '~2.2.6',
+210 silly resolved        mkdirp: '~0.5.0' },
+210 silly resolved     readmeFilename: 'README.md',
+210 silly resolved     main: './js/main/bluebird.js',
+210 silly resolved     files: [ 'js/main', 'js/zalgo', 'LICENSE', 'zalgo.js' ],
+210 silly resolved     readme: '[![Build Status](https://travis-ci.org/petkaantonov/bluebird.svg?branch=master)](https://travis-ci.org/petkaantonov/bluebird)\n\n<a href="http://promisesaplus.com/">\n    <img src="http://promisesaplus.com/assets/logo-small.png" alt="Promises/A+ logo"\n         title="Promises/A+ 1.1 compliant" align="right" />\n</a>\n\n\n\n#Introduction\n\nBluebird is a fully featured [promise](#what-are-promises-and-why-should-i-use-them) library with focus on innovative features and performance\n\n\n\n#Topics\n\n- [Features](#features)\n- [Quick start](#quick-start)\n- [API Reference and examples](API.md)\n- [Support](#support)\n- [What are promises and why should I use them?](#what-are-promises-and-why-should-i-use-them)\n- [Questions and issues](#questions-and-issues)\n- [Error handling](#error-handling)\n- [Development](#development)\n    - [Testing](#testing)\n    - [Benchmarking](#benchmarks)\n    - [Custom builds](#custom-builds)\n    - [For library authors](#for-library-authors)\n- [What is the sync build?](#what-is-the-sync-build)\n- [License](#license)\n- [Snippets for common problems](https://github.com/petkaantonov/bluebird/wiki/Snippets)\n- [Promise anti-patterns](https://github.com/petkaantonov/bluebird/wiki/Promise-anti-patterns)\n- [Changelog](changelog.md)\n- [Optimization guide](#optimization-guide)\n\n<img src="logo.png" alt="bluebird logo" align="right" />\n\n#Features:\n\n- [Promises A+](http://promisesaplus.com)\n- [Synchronous inspection](API.md#synchronous-inspection)\n- [Concurrency coordination](API.md#collections)\n- [Promisification on steroids](API.md#promisification)\n- [Resource management through a parallel of python `with`/C# `using`](API.md#resource-management)\n- [Cancellation and timeouts](API.md#cancellation)\n- [Parallel for C# `async` and `await`](API.md#generators)\n- Mind blowing utilities such as\n    - [`.bind()`](API.md#binddynamic-thisarg---promise)\n    - [`.call()`](API.md#callstring-propertyname--dynamic-arg---promise)\n    - [`Promise.join()`](API.md#promisejoinpromisethenablevalue-promises-function-handler---promise)\n    - [And](API.md#core) [much](API.md#timers) [more](API.md#utility)!\n- [Practical debugging solutions and sane defaults](#error-handling)\n- [Sick performance](benchmark/stats/latest.md)\n\n<hr>\n\n#Quick start\n\n##Node.js\n\n    npm install bluebird\n\nThen:\n\n```js\nvar Promise = require("bluebird");\n```\n\n##Browsers\n\nDownload the [bluebird.js](https://github.com/petkaantonov/bluebird/tree/master/js/browser) file. And then use a script tag:\n\n```html\n<script type="text/javascript" src="/scripts/bluebird.js"></script>\n```\n\nThe global variable `Promise` becomes available after the above script tag.\n\nA [minimal bluebird browser build](#custom-builds) is ̃38.92KB minified*, 11.65KB gzipped and has no external dependencies.\n\n*Google Closure Compiler using Simple.\n\n####Browser support\n\nBrowsers that [implement ECMA-262, edition 3](http://en.wikipedia.org/wiki/Ecmascript#Implementations) and later are supported.\n\n[![Selenium Test Status](https://saucelabs.com/browser-matrix/petka_antonov.svg)](https://saucelabs.com/u/petka_antonov)\n\n*IE7 and IE8 had to be removed from tests due to SauceLabs bug but are supported and pass all tests*\n\n**Note** that in ECMA-262, edition 3 (IE7, IE8 etc) it is not possible to use methods that have keyword names like `.catch` and `.finally`. The [API documentation](API.md) always lists a compatible alternative name that you can use if you need to support these browsers. For example `.catch` is replaced with `.caught` and `.finally` with `.lastly`.\n\nAlso, [long stack trace](API.md#promiselongstacktraces---void) support is only available in Chrome and Firefox.\n\n<sub>Previously bluebird required es5-shim.js and es5-sham.js to support Edition 3 - these are **no longer required** as of **0.10.4**.</sub>\n\nAfter quick start, see [API Reference and examples](API.md)\n\n<hr>\n\n#Support\n\n- IRC: #promises @freenode\n- StackOverflow: [bluebird tag](http://stackoverflow.com/questions/tagged/bluebird)\n- Bugs and feature requests: [github issue tracker](https://github.com/petkaantonov/bluebird/issues?state=open)\n\n<hr>\n\n#What are promises and why should I use them?\n\nYou should use promises to turn this:\n\n```js\nfs.readFile("file.json", function(err, val) {\n    if( err ) {\n        console.error("unable to read file");\n    }\n    else {\n        try {\n            val = JSON.parse(val);\n            console.log(val.success);\n        }\n        catch( e ) {\n            console.error("invalid json in file");\n        }\n    }\n});\n```\n\nInto this:\n\n```js\nfs.readFileAsync("file.json").then(JSON.parse).then(function(val) {\n    console.log(val.success);\n})\n.catch(SyntaxError, function(e) {\n    console.error("invalid json in file");\n})\n.catch(function(e){\n    console.error("unable to read file")\n});\n```\n\n*If you are wondering "there is no `readFileAsync` method on `fs` that returns a promise", see [promisification](API.md#promisification)*\n\nActually you might notice the latter has a lot in common with code that would do the same using synchronous I/O:\n\n```js\ntry {\n    var val = JSON.parse(fs.readFileSync("file.json"));\n    console.log(val.success);\n}\n//Syntax actually not supported in JS but drives the point\ncatch(SyntaxError e) {\n    console.error("invalid json in file");\n}\ncatch(Error e) {\n    console.error("unable to read file")\n}\n```\n\nAnd that is the point - being able to have something that is a lot like `return` and `throw` in synchronous code.\n\nYou can also use promises to improve code that was written with callback helpers:\n\n\n```js\n//Copyright Plato http://stackoverflow.com/a/19385911/995876\n//CC BY-SA 2.5\nmapSeries(URLs, function (URL, done) {\n    var options = {};\n    needle.get(URL, options, function (error, response, body) {\n        if (error) {\n            return done(error)\n        }\n        try {\n            var ret = JSON.parse(body);\n            return done(null, ret);\n        }\n        catch (e) {\n            done(e);\n        }\n    });\n}, function (err, results) {\n    if (err) {\n        console.log(err)\n    } else {\n        console.log(\'All Needle requests successful\');\n        // results is a 1 to 1 mapping in order of URLs > needle.body\n        processAndSaveAllInDB(results, function (err) {\n            if (err) {\n                return done(err)\n            }\n            console.log(\'All Needle requests saved\');\n            done(null);\n        });\n    }\n});\n```\n\nIs more pleasing to the eye when done with promises:\n\n```js\nPromise.promisifyAll(needle);\nvar options = {};\n\nvar current = Promise.resolve();\nPromise.map(URLs, function(URL) {\n    current = current.then(function () {\n        return needle.getAsync(URL, options);\n    });\n    return current;\n}).map(function(responseAndBody){\n    return JSON.parse(responseAndBody[1]);\n}).then(function (results) {\n    return processAndSaveAllInDB(results);\n}).then(function(){\n    console.log(\'All Needle requests saved\');\n}).catch(function (e) {\n    console.log(e);\n});\n```\n\nAlso promises don\'t just give you correspondences for synchronous features but can also be used as limited event emitters or callback aggregators.\n\nMore reading:\n\n - [Promise nuggets](http://spion.github.io/promise-nuggets/)\n - [Why I am switching to promises](http://spion.github.io/posts/why-i-am-switching-to-promises.html)\n - [What is the the point of promises](http://domenic.me/2012/10/14/youre-missing-the-point-of-promises/#toc_1)\n - [Snippets for common problems](https://github.com/petkaantonov/bluebird/wiki/Snippets)\n - [Promise anti-patterns](https://github.com/petkaantonov/bluebird/wiki/Promise-anti-patterns)\n\n#Questions and issues\n\nIf you find a bug in bluebird or have a feature request, file an issue in the [github issue tracker](https://github.com/petkaantonov/bluebird/issues). Anything else, such as questions for help in using the library, should be posted in [StackOverflow](http://stackoverflow.com/questions/tagged/bluebird) under tags `promise` and `bluebird`.\n\n#Error handling\n\nThis is a problem every promise library needs to handle in some way. Unhandled rejections/exceptions don\'t really have a good agreed-on asynchronous correspondence. The problem is that it is impossible to predict the future and know if a rejected promise will eventually be handled.\n\nThere are two common pragmatic attempts at solving the problem that promise libraries do.\n\nThe more popular one is to have the user explicitly communicate that they are done and any unhandled rejections should be thrown, like so:\n\n```js\ndownload().then(...).then(...).done();\n```\n\nFor handling this problem, in my opinion, this is completely unacceptable and pointless. The user must remember to explicitly call `.done` and that cannot be justified when the problem is forgetting to create an error handler in the first place.\n\nThe second approach, which is what bluebird by default takes, is to call a registered handler if a rejection is unhandled by the start of a second turn. The default handler is to write the stack trace to `stderr` or `console.error` in browsers. This is close to what happens with synchronous code - your code doesn\'t work as expected and you open console and see a stack trace. Nice.\n\nOf course this is not perfect, if your code for some reason needs to swoop in and attach error handler to some promise after the promise has been hanging around a while then you will see annoying messages. In that case you can use the `.done()` method to signal that any hanging exceptions should be thrown.\n\nIf you want to override the default handler for these possibly unhandled rejections, you can pass yours like so:\n\n```js\nPromise.onPossiblyUnhandledRejection(function(error){\n    throw error;\n});\n```\n\nIf you want to also enable long stack traces, call:\n\n```js\nPromise.longStackTraces();\n```\n\nright after the library is loaded.\n\nIn node.js use the environment flag `BLUEBIRD_DEBUG`:\n\n```\nBLUEBIRD_DEBUG=1 node server.js\n```\n\nto enable long stack traces in all instances of bluebird.\n\nLong stack traces cannot be disabled after being enabled, and cannot be enabled after promises have alread been created. Long stack traces imply a substantial performance penalty, even after using every trick to optimize them.\n\nLong stack traces are enabled by default in the debug build.\n\n####Expected and unexpected errors\n\nA practical problem with Promises/A+ is that it models Javascript `try-catch` too closely for its own good. Therefore by default promises inherit `try-catch` warts such as the inability to specify the error types that the catch block is eligible for. It is an anti-pattern in every other language to use catch-all handlers because they swallow exceptions that you might not know about.\n\nNow, Javascript does have a perfectly fine and working way of creating error type hierarchies. It is still quite awkward to use them with the built-in `try-catch` however:\n\n```js\ntry {\n    //code\n}\ncatch(e) {\n    if( e instanceof WhatIWantError) {\n        //handle\n    }\n    else {\n        throw e;\n    }\n}\n```\n\nWithout such checking, unexpected errors would be silently swallowed. However, with promises, bluebird brings the future (hopefully) here now and extends the `.catch` to [accept potential error type eligibility](API.md#catchfunction-errorclass-function-handler---promise).\n\nFor instance here it is expected that some evil or incompetent entity will try to crash our server from `SyntaxError` by providing syntactically invalid JSON:\n\n```js\ngetJSONFromSomewhere().then(function(jsonString) {\n    return JSON.parse(jsonString);\n}).then(function(object) {\n    console.log("it was valid json: ", object);\n}).catch(SyntaxError, function(e){\n    console.log("don\'t be evil");\n});\n```\n\nHere any kind of unexpected error will automatically reported on `stderr` along with a stack trace because we only register a handler for the expected `SyntaxError`.\n\nOk, so, that\'s pretty neat. But actually not many libraries define error types and it is in fact a complete ghetto out there with ad hoc strings being attached as some arbitrary property name like `.name`, `.type`, `.code`, not having any property at all or even throwing strings as errors and so on. So how can we still listen for expected errors?\n\nBluebird defines a special error type `OperationalError` (you can get a reference from `Promise.OperationalError`). This type of error is given as rejection reason by promisified methods when\ntheir underlying library gives an untyped, but expected error. Primitives such as strings, and error objects that are directly created like `new Error("database didn\'t respond")` are considered untyped.\n\nExample of such library is the node core library `fs`. So if we promisify it, we can catch just the errors we want pretty easily and have programmer errors be redirected to unhandled rejection handler so that we notice them:\n\n```js\n//Read more about promisification in the API Reference:\n//API.md\nvar fs = Promise.promisifyAll(require("fs"));\n\nfs.readFileAsync("myfile.json").then(JSON.parse).then(function (json) {\n    console.log("Successful json")\n}).catch(SyntaxError, function (e) {\n    console.error("file contains invalid json");\n}).catch(Promise.OperationalError, function (e) {\n    console.error("unable to read file, because: ", e.message);\n});\n```\n\nThe last `catch` handler is only invoked when the `fs` module explicitly used the `err` argument convention of async callbacks to inform of an expected error. The `OperationalError` instance will contain the original error in its `.cause` property but it does have a direct copy of the `.message` and `.stack` too. In this code any unexpected error - be it in our code or the `fs` module - would not be caught by these handlers and therefore not swallowed.\n\nSince a `catch` handler typed to `Promise.OperationalError` is expected to be used very often, it has a neat shorthand:\n\n```js\n.error(function (e) {\n    console.error("unable to read file, because: ", e.message);\n});\n```\n\nSee [API documentation for `.error()`](API.md#error-rejectedhandler----promise)\n\nFinally, Bluebird also supports predicate-based filters. If you pass a\npredicate function instead of an error type, the predicate will receive\nthe error as an argument. The return result will be used determine whether\nthe error handler should be called.\n\nPredicates should allow for very fine grained control over caught errors:\npattern matching, error typesets with set operations and many other techniques\ncan be implemented on top of them.\n\nExample of using a predicate-based filter:\n\n```js\nvar Promise = require("bluebird");\nvar request = Promise.promisify(require("request"));\n\nfunction clientError(e) {\n    return e.code >= 400 && e.code < 500;\n}\n\nrequest("http://www.google.com").then(function(contents){\n    console.log(contents);\n}).catch(clientError, function(e){\n   //A client error like 400 Bad Request happened\n});\n```\n\n**Danger:** The JavaScript language allows throwing primitive values like strings. Throwing primitives can lead to worse or no stack traces. Primitives [are not exceptions](http://www.devthought.com/2011/12/22/a-string-is-not-an-error/). You should consider always throwing Error objects when handling exceptions.\n\n<hr>\n\n####How do long stack traces differ from e.g. Q?\n\nBluebird attempts to have more elaborate traces. Consider:\n\n```js\nError.stackTraceLimit = 25;\nQ.longStackSupport = true;\nQ().then(function outer() {\n    return Q().then(function inner() {\n        return Q().then(function evenMoreInner() {\n            a.b.c.d();\n        }).catch(function catcher(e){\n            console.error(e.stack);\n        });\n    })\n});\n```\n\nYou will see\n\n    ReferenceError: a is not defined\n        at evenMoreInner (<anonymous>:7:13)\n    From previous event:\n        at inner (<anonymous>:6:20)\n\nCompare to:\n\n```js\nError.stackTraceLimit = 25;\nPromise.longStackTraces();\nPromise.resolve().then(function outer() {\n    return Promise.resolve().then(function inner() {\n        return Promise.resolve().then(function evenMoreInner() {\n            a.b.c.d()\n        }).catch(function catcher(e){\n            console.error(e.stack);\n        });\n    });\n});\n```\n\n    ReferenceError: a is not defined\n        at evenMoreInner (<anonymous>:7:13)\n    From previous event:\n        at inner (<anonymous>:6:36)\n    From previous event:\n        at outer (<anonymous>:5:32)\n    From previous event:\n        at <anonymous>:4:21\n        at Object.InjectedScript._evaluateOn (<anonymous>:572:39)\n        at Object.InjectedScript._evaluateAndWrap (<anonymous>:531:52)\n        at Object.InjectedScript.evaluate (<anonymous>:450:21)\n\n\nA better and more practical example of the differences can be seen in gorgikosev\'s [debuggability competition](https://github.com/spion/async-compare#debuggability).\n\n<hr>\n\n#Development\n\nFor development tasks such as running benchmarks or testing, you need to clone the repository and install dev-dependencies.\n\nInstall [node](http://nodejs.org/), [npm](https://npmjs.org/), and [grunt](http://gruntjs.com/).\n\n    git clone git@github.com:petkaantonov/bluebird.git\n    cd bluebird\n    npm install\n\n##Testing\n\nTo run all tests, run `grunt test`. Note that 10 processes are created to run the tests in parallel. The `stdout` of tests is ignored by default and everything will stop at the first failure. If you want to run tests sequentially with all output, do:\n\n    grunt test --jobs=1\n\nYou may also give a higher `--jobs` value to run more tests concurrently (and finish faster).\n\nIndividual files can be run with `grunt test --run=filename` where `filename` is a test file name in `/test` folder or `/test/mocha` folder. The `.js` prefix is not needed. The dots for AP compliance tests are not needed, so to run `/test/mocha/2.3.3.js` for instance:\n\n    grunt test --run=233\n\nWhen trying to get a test to pass, run only that individual test file with `--verbose` to see the output from that test:\n\n    grunt test --run=233 --verbose\n\nThe reason for the unusual way of testing is because the majority of tests are from different libraries using different testing frameworks and because it takes forever to test sequentially.\n\n\n###Testing in browsers\n\nTo test in browsers:\n\n    cd browser\n    setup\n\nThen open the `index.html` in your browser. Requires bash (on windows the mingw32 that comes with git works fine too).\n\nYou may also [visit the github hosted page](http://petkaantonov.github.io/bluebird/browser/).\n\nKeep the test tab active because some tests are timing-sensitive and will fail if the browser is throttling timeouts. Chrome will do this for example when the tab is not active.\n\n##Benchmarks\n\nTo run a benchmark, run the given command for a benchmark while on the project root. Requires bash (on windows the mingw32 that comes with git works fine too).\n\nNode 0.11.2+ is required to run the generator examples.\n\n###1\\. DoxBee sequential\n\nCurrently the most relevant benchmark is @gorkikosev\'s benchmark in the article [Analysis of generators and other async patterns in node](http://spion.github.io/posts/analysis-generators-and-other-async-patterns-node.html). The benchmark emulates a situation where n amount of users are making a request in parallel to execute some mixed async/sync action. The benchmark has been modified to include a warm-up phase to minimize any JITing during timed sections.\n\nCommand: `bench doxbee`\n\n###2\\. Made-up parallel\n\nThis made-up scenario runs 15 shimmed queries in parallel.\n\nCommand: `bench parallel`\n\n##Custom builds\n\nCustom builds for browsers are supported through a command-line utility.\n\n\n\n\n<table>\n    <caption>The following features can be disabled</caption>\n    <thead>\n        <tr>\n            <th>Feature(s)</th>\n            <th>Command line identifier</th>\n        </tr>\n    </thead>\n    <tbody>\n\n        <tr><td><a href="API.md#any---promise"><code>.any</code></a> and <a href="API.md#promiseanyarraydynamicpromise-values---promise"><code>Promise.any</code></a></td><td><code>any</code></td></tr>\n        <tr><td><a href="API.md#race---promise"><code>.race</code></a> and <a href="API.md#promiseracearraypromise-promises---promise"><code>Promise.race</code></a></td><td><code>race</code></td></tr>\n        <tr><td><a href="API.md#callstring-propertyname--dynamic-arg---promise"><code>.call</code></a> and <a href="API.md#getstring-propertyname---promise"><code>.get</code></a></td><td><code>call_get</code></td></tr>\n        <tr><td><a href="API.md#filterfunction-filterer---promise"><code>.filter</code></a> and <a href="API.md#promisefilterarraydynamicpromise-values-function-filterer---promise"><code>Promise.filter</code></a></td><td><code>filter</code></td></tr>\n        <tr><td><a href="API.md#mapfunction-mapper---promise"><code>.map</code></a> and <a href="API.md#promisemaparraydynamicpromise-values-function-mapper---promise"><code>Promise.map</code></a></td><td><code>map</code></td></tr>\n        <tr><td><a href="API.md#reducefunction-reducer--dynamic-initialvalue---promise"><code>.reduce</code></a> and <a href="API.md#promisereducearraydynamicpromise-values-function-reducer--dynamic-initialvalue---promise"><code>Promise.reduce</code></a></td><td><code>reduce</code></td></tr>\n        <tr><td><a href="API.md#props---promise"><code>.props</code></a> and <a href="API.md#promisepropsobjectpromise-object---promise"><code>Promise.props</code></a></td><td><code>props</code></td></tr>\n        <tr><td><a href="API.md#settle---promise"><code>.settle</code></a> and <a href="API.md#promisesettlearraydynamicpromise-values---promise"><code>Promise.settle</code></a></td><td><code>settle</code></td></tr>\n        <tr><td><a href="API.md#someint-count---promise"><code>.some</code></a> and <a href="API.md#promisesomearraydynamicpromise-values-int-count---promise"><code>Promise.some</code></a></td><td><code>some</code></td></tr>\n        <tr><td><a href="API.md#nodeifyfunction-callback---promise"><code>.nodeify</code></a></td><td><code>nodeify</code></td></tr>\n        <tr><td><a href="API.md#promisecoroutinegeneratorfunction-generatorfunction---function"><code>Promise.coroutine</code></a> and <a href="API.md#promisespawngeneratorfunction-generatorfunction---promise"><code>Promise.spawn</code></a></td><td><code>generators</code></td></tr>\n        <tr><td><a href="API.md#progression">Progression</a></td><td><code>progress</code></td></tr>\n        <tr><td><a href="API.md#promisification">Promisification</a></td><td><code>promisify</code></td></tr>\n        <tr><td><a href="API.md#cancellation">Cancellation</a></td><td><code>cancel</code></td></tr>\n        <tr><td><a href="API.md#timers">Timers</a></td><td><code>timers</code></td></tr>\n        <tr><td><a href="API.md#resource-management">Resource management</a></td><td><code>using</code></td></tr>\n\n    </tbody>\n</table>\n\n\nMake sure you have cloned the repo somewhere and did `npm install` successfully.\n\nAfter that you can run:\n\n    grunt build --features="core"\n\n\nThe above builds the most minimal build you can get. You can add more features separated by spaces from the above list:\n\n    grunt build --features="core filter map reduce"\n\nThe custom build file will be found from `/js/browser/bluebird.js`. It will have a comment that lists the disabled and enabled features.\n\nNote that the build leaves the `/js/main` etc folders with same features so if you use the folder for node.js at the same time, don\'t forget to build\na full version afterwards (after having taken a copy of the bluebird.js somewhere):\n\n    grunt build\n\n<hr>\n\n##For library authors\n\nBuilding a library that depends on bluebird? You should know about a few features.\n\nIf your library needs to do something obtrusive like adding or modifying methods on the `Promise` prototype, uses long stack traces or uses a custom unhandled rejection handler then... that\'s totally ok as long as you don\'t use `require("bluebird")`. Instead you should create a file\nthat creates an isolated copy. For example, creating a file called `bluebird-extended.js` that contains:\n\n```js\n                //NOTE the function call right after\nmodule.exports = require("bluebird/js/main/promise")();\n```\n\nYour library can then use `var Promise = require("bluebird-extended");` and do whatever it wants with it. Then if the application or other library uses their own bluebird promises they will all play well together because of Promises/A+ thenable assimilation magic.\n\nYou should also know about [`.nodeify()`](API.md#nodeifyfunction-callback---promise) which makes it easy to provide a dual callback/promise API.\n\n<hr>\n\n##What is the sync build?\n\nYou may now use sync build by:\n\n    var Promise = require("bluebird/zalgo");\n\nThe sync build is provided to see how forced asynchronity affects benchmarks. It should not be used in real code due to the implied hazards.\n\nThe normal async build gives Promises/A+ guarantees about asynchronous resolution of promises. Some people think this affects performance or just plain love their code having a possibility\nof stack overflow errors and non-deterministic behavior.\n\nThe sync build skips the async call trampoline completely, e.g code like:\n\n    async.invoke( this.fn, this, val );\n\nAppears as this in the sync build:\n\n    this.fn(val);\n\nThis should pressure the CPU slightly less and thus the sync build should perform better. Indeed it does, but only marginally. The biggest performance boosts are from writing efficient Javascript, not from compromising determinism.\n\nNote that while some benchmarks are waiting for the next event tick, the CPU is actually not in use during that time. So the resulting benchmark result is not completely accurate because on node.js you only care about how much the CPU is taxed. Any time spent on CPU is time the whole process (or server) is paralyzed. And it is not graceful like it would be with threads.\n\n\n```js\nvar cache = new Map(); //ES6 Map or DataStructures/Map or whatever...\nfunction getResult(url) {\n    var resolver = Promise.pending();\n    if (cache.has(url)) {\n        resolver.resolve(cache.get(url));\n    }\n    else {\n        http.get(url, function(err, content) {\n            if (err) resolver.reject(err);\n            else {\n                cache.set(url, content);\n                resolver.resolve(content);\n            }\n        });\n    }\n    return resolver.promise;\n}\n\n\n\n//The result of console.log is truly random without async guarantees\nfunction guessWhatItPrints( url ) {\n    var i = 3;\n    getResult(url).then(function(){\n        i = 4;\n    });\n    console.log(i);\n}\n```\n\n#Optimization guide\n\nArticles about optimization will be periodically posted in [the wiki section](https://github.com/petkaantonov/bluebird/wiki), polishing edits are welcome.\n\nA single cohesive guide compiled from the articles will probably be done eventually.\n\n#License\n\nCopyright (c) 2014 Petka Antonov\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n',
+210 silly resolved     _id: 'bluebird@2.2.2',
+210 silly resolved     _from: 'bluebird@~2.2.2' } ]
+211 info install chalk@0.5.1 into /usr/local/lib/node_modules/elasticsearch
+212 info install forever-agent@0.5.2 into /usr/local/lib/node_modules/elasticsearch
+213 info install lodash-node@2.4.1 into /usr/local/lib/node_modules/elasticsearch
+214 info install bluebird@2.2.2 into /usr/local/lib/node_modules/elasticsearch
+215 info installOne chalk@0.5.1
+216 warn engine chalk@0.5.1: wanted: {"node":">=0.10.0"} (current: {"node":"v0.8.8","npm":"1.1.59"})
+217 info installOne forever-agent@0.5.2
+218 info installOne lodash-node@2.4.1
+219 info installOne bluebird@2.2.2
+220 verbose from cache /home/denic/.npm/chalk/0.5.1/package/package.json
+221 verbose from cache /home/denic/.npm/forever-agent/0.5.2/package/package.json
+222 verbose from cache /home/denic/.npm/lodash-node/2.4.1/package/package.json
+223 verbose from cache /home/denic/.npm/bluebird/2.2.2/package/package.json
+224 info /usr/local/lib/node_modules/elasticsearch/node_modules/chalk unbuild
+225 verbose read json /usr/local/lib/node_modules/elasticsearch/node_modules/chalk/package.json
+226 info /usr/local/lib/node_modules/elasticsearch/node_modules/forever-agent unbuild
+227 verbose read json /usr/local/lib/node_modules/elasticsearch/node_modules/forever-agent/package.json
+228 info /usr/local/lib/node_modules/elasticsearch/node_modules/lodash-node unbuild
+229 verbose read json /usr/local/lib/node_modules/elasticsearch/node_modules/lodash-node/package.json
+230 info /usr/local/lib/node_modules/elasticsearch/node_modules/bluebird unbuild
+231 verbose read json /usr/local/lib/node_modules/elasticsearch/node_modules/bluebird/package.json
+232 verbose tar unpack /home/denic/.npm/chalk/0.5.1/package.tgz
+233 verbose tar unpack /home/denic/.npm/forever-agent/0.5.2/package.tgz
+234 verbose tar unpack /home/denic/.npm/lodash-node/2.4.1/package.tgz
+235 verbose tar unpack /home/denic/.npm/bluebird/2.2.2/package.tgz
+236 silly lockFile 96962596-elasticsearch-node-modules-chalk /usr/local/lib/node_modules/elasticsearch/node_modules/chalk
+237 verbose lock /usr/local/lib/node_modules/elasticsearch/node_modules/chalk /home/denic/.npm/96962596-elasticsearch-node-modules-chalk.lock
+238 silly lockFile 41c12e9f-earch-node-modules-forever-agent /usr/local/lib/node_modules/elasticsearch/node_modules/forever-agent
+239 verbose lock /usr/local/lib/node_modules/elasticsearch/node_modules/forever-agent /home/denic/.npm/41c12e9f-earch-node-modules-forever-agent.lock
+240 silly lockFile 424bd4b3-csearch-node-modules-lodash-node /usr/local/lib/node_modules/elasticsearch/node_modules/lodash-node
+241 verbose lock /usr/local/lib/node_modules/elasticsearch/node_modules/lodash-node /home/denic/.npm/424bd4b3-csearch-node-modules-lodash-node.lock
+242 silly lockFile e9261dee-sticsearch-node-modules-bluebird /usr/local/lib/node_modules/elasticsearch/node_modules/bluebird
+243 verbose lock /usr/local/lib/node_modules/elasticsearch/node_modules/bluebird /home/denic/.npm/e9261dee-sticsearch-node-modules-bluebird.lock
+244 silly gunzTarPerm modes [ '777', '666' ]
+245 silly gunzTarPerm modes [ '777', '666' ]
+246 silly gunzTarPerm modes [ '777', '666' ]
+247 silly gunzTarPerm modes [ '777', '666' ]
+248 silly gunzTarPerm extractEntry package.json
+249 silly gunzTarPerm extractEntry package.json
+250 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+251 silly gunzTarPerm extractEntry package.json
+252 silly gunzTarPerm extractEntry index.js
+253 silly gunzTarPerm extractEntry readme.md
+254 silly gunzTarPerm extractEntry package.json
+255 silly gunzTarPerm extractEntry README.md
+256 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+257 silly gunzTarPerm extractEntry LICENSE
+258 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+259 silly gunzTarPerm extractEntry README.md
+260 silly gunzTarPerm extractEntry modern/objects.js
+261 silly gunzTarPerm extractEntry README.md
+262 silly gunzTarPerm extractEntry LICENSE
+263 silly gunzTarPerm extractEntry zalgo.js
+264 silly gunzTarPerm extractEntry js/main/promise_resolver.js
+265 silly gunzTarPerm extractEntry index.js
+266 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+267 silly gunzTarPerm extractEntry modern/arrays.js
+268 silly gunzTarPerm extractEntry modern/index.js
+269 silly gunzTarPerm extractEntry modern/chaining.js
+270 silly gunzTarPerm extractEntry modern/collections.js
+271 silly gunzTarPerm extractEntry js/main/errors_api_rejection.js
+272 silly gunzTarPerm extractEntry js/main/any.js
+273 silly gunzTarPerm extractEntry js/main/map.js
+274 silly gunzTarPerm extractEntry js/main/race.js
+275 silly gunzTarPerm extractEntry js/main/some.js
+276 silly gunzTarPerm extractEntry modern/utilities.js
+277 silly gunzTarPerm extractEntry modern/functions.js
+278 silly gunzTarPerm extractEntry js/main/progress.js
+279 silly gunzTarPerm extractEntry js/main/reduce.js
+280 silly gunzTarPerm extractEntry modern/support.js
+281 silly gunzTarPerm extractEntry js/main/timers.js
+282 silly gunzTarPerm extractEntry modern/functions/bindAll.js
+283 silly gunzTarPerm extractEntry js/main/assert.js
+284 silly gunzTarPerm extractEntry modern/functions/delay.js
+285 silly gunzTarPerm extractEntry js/main/generators.js
+286 silly gunzTarPerm extractEntry js/main/settle.js
+287 silly gunzTarPerm extractEntry js/main/each.js
+288 silly gunzTarPerm extractEntry js/main/finally.js
+289 silly gunzTarPerm extractEntry js/main/call_get.js
+290 silly gunzTarPerm extractEntry js/main/schedule.js
+291 silly gunzTarPerm extractEntry js/main/captured_trace.js
+292 silly gunzTarPerm extractEntry js/main/join.js
+293 silly gunzTarPerm extractEntry js/main/errors.js
+294 silly gunzTarPerm extractEntry js/main/promisify.js
+295 silly gunzTarPerm extractEntry modern/functions/defer.js
+296 silly gunzTarPerm extractEntry modern/functions/memoize.js
+297 silly gunzTarPerm extractEntry js/main/thenables.js
+298 silly gunzTarPerm extractEntry js/main/nodeify.js
+299 silly gunzTarPerm extractEntry modern/functions/createCallback.js
+300 verbose read json /usr/local/lib/node_modules/elasticsearch/node_modules/chalk/package.json
+301 silly gunzTarPerm extractEntry js/main/filter.js
+302 silly gunzTarPerm extractEntry modern/functions/curry.js
+303 silly gunzTarPerm extractEntry js/main/direct_resolve.js
+304 silly gunzTarPerm extractEntry js/main/using.js
+305 silly gunzTarPerm extractEntry js/main/async.js
+306 silly gunzTarPerm extractEntry js/main/bluebird.js
+307 silly gunzTarPerm extractEntry js/main/promise.js
+308 silly gunzTarPerm extractEntry js/main/queue.js
+309 silly gunzTarPerm extractEntry js/main/promise_array.js
+310 silly gunzTarPerm extractEntry js/main/catch_filter.js
+311 silly gunzTarPerm extractEntry modern/functions/partialRight.js
+312 silly gunzTarPerm extractEntry modern/functions/compose.js
+313 silly lockFile 96962596-elasticsearch-node-modules-chalk /usr/local/lib/node_modules/elasticsearch/node_modules/chalk
+314 silly gunzTarPerm extractEntry js/main/synchronous_inspection.js
+315 silly gunzTarPerm extractEntry js/main/util.js
+316 silly gunzTarPerm extractEntry modern/functions/once.js
+317 silly gunzTarPerm extractEntry js/main/props.js
+318 silly gunzTarPerm extractEntry modern/functions/bindKey.js
+319 silly gunzTarPerm extractEntry js/main/cancel.js
+320 silly gunzTarPerm extractEntry modern/functions/throttle.js
+321 silly gunzTarPerm extractEntry js/main/es5.js
+322 silly gunzTarPerm extractEntry modern/functions/after.js
+323 info preinstall chalk@0.5.1
+324 silly gunzTarPerm extractEntry js/zalgo/promise_resolver.js
+325 silly gunzTarPerm extractEntry modern/functions/partial.js
+326 silly gunzTarPerm extractEntry js/zalgo/errors_api_rejection.js
+327 silly gunzTarPerm extractEntry modern/functions/debounce.js
+328 verbose from cache /usr/local/lib/node_modules/elasticsearch/node_modules/chalk/package.json
+329 silly gunzTarPerm extractEntry js/zalgo/any.js
+330 silly gunzTarPerm extractEntry modern/functions/bind.js
+331 verbose read json /usr/local/lib/node_modules/elasticsearch/node_modules/forever-agent/package.json
+332 silly gunzTarPerm extractEntry js/zalgo/map.js
+333 silly gunzTarPerm extractEntry modern/functions/wrap.js
+334 silly gunzTarPerm extractEntry modern/internals/baseClone.js
+335 silly gunzTarPerm extractEntry js/zalgo/race.js
+336 silly gunzTarPerm extractEntry modern/internals/charAtCallback.js
+337 silly gunzTarPerm extractEntry js/zalgo/some.js
+338 silly gunzTarPerm extractEntry modern/internals/slice.js
+339 silly gunzTarPerm extractEntry js/zalgo/progress.js
+340 silly gunzTarPerm extractEntry modern/internals/cacheIndexOf.js
+341 silly gunzTarPerm extractEntry js/zalgo/reduce.js
+342 silly gunzTarPerm extractEntry modern/internals/objectTypes.js
+343 silly gunzTarPerm extractEntry js/zalgo/timers.js
+344 silly gunzTarPerm extractEntry modern/internals/baseIsEqual.js
+345 silly gunzTarPerm extractEntry js/zalgo/assert.js
+346 silly gunzTarPerm extractEntry modern/internals/lodashWrapper.js
+347 silly gunzTarPerm extractEntry js/zalgo/generators.js
+348 silly lockFile 41c12e9f-earch-node-modules-forever-agent /usr/local/lib/node_modules/elasticsearch/node_modules/forever-agent
+349 silly gunzTarPerm extractEntry modern/internals/compareAscending.js
+350 silly gunzTarPerm extractEntry js/zalgo/settle.js
+351 silly gunzTarPerm extractEntry modern/internals/getObject.js
+352 silly gunzTarPerm extractEntry js/zalgo/each.js
+353 silly gunzTarPerm extractEntry modern/internals/reEscapedHtml.js
+354 silly gunzTarPerm extractEntry js/zalgo/finally.js
+355 silly gunzTarPerm extractEntry modern/internals/escapeHtmlChar.js
+356 silly gunzTarPerm extractEntry js/zalgo/call_get.js
+357 silly gunzTarPerm extractEntry modern/internals/keyPrefix.js
+358 silly gunzTarPerm extractEntry js/zalgo/schedule.js
+359 info preinstall forever-agent@0.5.2
+360 silly gunzTarPerm extractEntry modern/internals/baseRandom.js
+361 silly gunzTarPerm extractEntry js/zalgo/captured_trace.js
+362 silly gunzTarPerm extractEntry modern/internals/htmlEscapes.js
+363 silly gunzTarPerm extractEntry js/zalgo/join.js
+364 verbose from cache /usr/local/lib/node_modules/elasticsearch/node_modules/forever-agent/package.json
+365 silly gunzTarPerm extractEntry js/zalgo/errors.js
+366 silly gunzTarPerm extractEntry modern/internals/reUnescapedHtml.js
+367 silly gunzTarPerm extractEntry modern/internals/largeArraySize.js
+368 silly gunzTarPerm extractEntry js/zalgo/promisify.js
+369 silly gunzTarPerm extractEntry js/zalgo/thenables.js
+370 silly gunzTarPerm extractEntry js/zalgo/nodeify.js
+371 silly gunzTarPerm extractEntry modern/internals/createAggregator.js
+372 silly gunzTarPerm extractEntry modern/internals/baseDifference.js
+373 silly gunzTarPerm extractEntry modern/internals/createWrapper.js
+374 silly gunzTarPerm extractEntry js/zalgo/filter.js
+375 silly gunzTarPerm extractEntry js/zalgo/direct_resolve.js
+376 silly gunzTarPerm extractEntry modern/internals/shimKeys.js
+377 silly gunzTarPerm extractEntry modern/internals/unescapeHtmlChar.js
+378 silly gunzTarPerm extractEntry js/zalgo/using.js
+379 silly gunzTarPerm extractEntry js/zalgo/async.js
+380 silly gunzTarPerm extractEntry modern/internals/arrayPool.js
+381 silly gunzTarPerm extractEntry modern/internals/releaseObject.js
+382 silly gunzTarPerm extractEntry js/zalgo/bluebird.js
+383 silly gunzTarPerm extractEntry modern/internals/baseUniq.js
+384 verbose readDependencies using package.json deps
+385 verbose from cache /usr/local/lib/node_modules/elasticsearch/node_modules/chalk/package.json
+386 verbose readDependencies using package.json deps
+387 verbose from cache /usr/local/lib/node_modules/elasticsearch/node_modules/forever-agent/package.json
+388 silly gunzTarPerm extractEntry js/zalgo/promise.js
+389 silly gunzTarPerm extractEntry js/zalgo/queue.js
+390 verbose readDependencies using package.json deps
+391 verbose readDependencies using package.json deps
+392 silly resolved []
+393 verbose about to build /usr/local/lib/node_modules/elasticsearch/node_modules/forever-agent
+394 info build /usr/local/lib/node_modules/elasticsearch/node_modules/forever-agent
+395 verbose from cache /usr/local/lib/node_modules/elasticsearch/node_modules/forever-agent/package.json
+396 silly gunzTarPerm extractEntry js/zalgo/promise_array.js
+397 silly gunzTarPerm extractEntry js/zalgo/catch_filter.js
+398 silly gunzTarPerm extractEntry js/zalgo/synchronous_inspection.js
+399 silly gunzTarPerm extractEntry js/zalgo/util.js
+400 silly gunzTarPerm extractEntry js/zalgo/props.js
+401 silly gunzTarPerm extractEntry modern/internals/setBindData.js
+402 silly gunzTarPerm extractEntry modern/internals/baseBind.js
+403 silly gunzTarPerm extractEntry js/zalgo/cancel.js
+404 verbose linkStuff [ true,
+404 verbose linkStuff   '/usr/local/lib/node_modules',
+404 verbose linkStuff   false,
+404 verbose linkStuff   '/usr/local/lib/node_modules/elasticsearch/node_modules' ]
+405 info linkStuff forever-agent@0.5.2
+406 verbose linkBins forever-agent@0.5.2
+407 verbose linkMans forever-agent@0.5.2
+408 verbose rebuildBundles forever-agent@0.5.2
+409 verbose cache add [ 'ansi-styles@^1.1.0', null ]
+410 silly cache add name=undefined spec="ansi-styles@^1.1.0" args=["ansi-styles@^1.1.0",null]
+411 verbose parsed url { pathname: 'ansi-styles@^1.1.0',
+411 verbose parsed url   path: 'ansi-styles@^1.1.0',
+411 verbose parsed url   href: 'ansi-styles@^1.1.0' }
+412 silly cache add name="ansi-styles" spec="^1.1.0" args=["ansi-styles","^1.1.0"]
+413 verbose parsed url { pathname: '^1.1.0', path: '^1.1.0', href: '^1.1.0' }
+414 verbose addNamed [ 'ansi-styles', '^1.1.0' ]
+415 verbose addNamed [ null, null ]
+416 silly lockFile f531fbfe-ansi-styles-1-1-0 ansi-styles@^1.1.0
+417 verbose lock ansi-styles@^1.1.0 /home/denic/.npm/f531fbfe-ansi-styles-1-1-0.lock
+418 verbose cache add [ 'escape-string-regexp@^1.0.0', null ]
+419 silly cache add name=undefined spec="escape-string-regexp@^1.0.0" args=["escape-string-regexp@^1.0.0",null]
+420 verbose parsed url { pathname: 'escape-string-regexp@^1.0.0',
+420 verbose parsed url   path: 'escape-string-regexp@^1.0.0',
+420 verbose parsed url   href: 'escape-string-regexp@^1.0.0' }
+421 silly cache add name="escape-string-regexp" spec="^1.0.0" args=["escape-string-regexp","^1.0.0"]
+422 verbose parsed url { pathname: '^1.0.0', path: '^1.0.0', href: '^1.0.0' }
+423 verbose addNamed [ 'escape-string-regexp', '^1.0.0' ]
+424 verbose addNamed [ null, null ]
+425 silly lockFile 9f5f1582-escape-string-regexp-1-0-0 escape-string-regexp@^1.0.0
+426 verbose lock escape-string-regexp@^1.0.0 /home/denic/.npm/9f5f1582-escape-string-regexp-1-0-0.lock
+427 verbose cache add [ 'has-ansi@^0.1.0', null ]
+428 silly cache add name=undefined spec="has-ansi@^0.1.0" args=["has-ansi@^0.1.0",null]
+429 verbose parsed url { pathname: 'has-ansi@^0.1.0',
+429 verbose parsed url   path: 'has-ansi@^0.1.0',
+429 verbose parsed url   href: 'has-ansi@^0.1.0' }
+430 silly cache add name="has-ansi" spec="^0.1.0" args=["has-ansi","^0.1.0"]
+431 verbose parsed url { pathname: '^0.1.0', path: '^0.1.0', href: '^0.1.0' }
+432 verbose addNamed [ 'has-ansi', '^0.1.0' ]
+433 verbose addNamed [ null, null ]
+434 silly lockFile 67e902d7-has-ansi-0-1-0 has-ansi@^0.1.0
+435 verbose lock has-ansi@^0.1.0 /home/denic/.npm/67e902d7-has-ansi-0-1-0.lock
+436 verbose cache add [ 'strip-ansi@^0.3.0', null ]
+437 silly cache add name=undefined spec="strip-ansi@^0.3.0" args=["strip-ansi@^0.3.0",null]
+438 verbose parsed url { pathname: 'strip-ansi@^0.3.0',
+438 verbose parsed url   path: 'strip-ansi@^0.3.0',
+438 verbose parsed url   href: 'strip-ansi@^0.3.0' }
+439 silly cache add name="strip-ansi" spec="^0.3.0" args=["strip-ansi","^0.3.0"]
+440 verbose parsed url { pathname: '^0.3.0', path: '^0.3.0', href: '^0.3.0' }
+441 verbose addNamed [ 'strip-ansi', '^0.3.0' ]
+442 verbose addNamed [ null, null ]
+443 silly lockFile 3a64cb31-strip-ansi-0-3-0 strip-ansi@^0.3.0
+444 verbose lock strip-ansi@^0.3.0 /home/denic/.npm/3a64cb31-strip-ansi-0-3-0.lock
+445 verbose cache add [ 'supports-color@^0.2.0', null ]
+446 silly cache add name=undefined spec="supports-color@^0.2.0" args=["supports-color@^0.2.0",null]
+447 verbose parsed url { pathname: 'supports-color@^0.2.0',
+447 verbose parsed url   path: 'supports-color@^0.2.0',
+447 verbose parsed url   href: 'supports-color@^0.2.0' }
+448 silly cache add name="supports-color" spec="^0.2.0" args=["supports-color","^0.2.0"]
+449 verbose parsed url { pathname: '^0.2.0', path: '^0.2.0', href: '^0.2.0' }
+450 verbose addNamed [ 'supports-color', '^0.2.0' ]
+451 verbose addNamed [ null, null ]
+452 silly lockFile e3aa172d-supports-color-0-2-0 supports-color@^0.2.0
+453 verbose lock supports-color@^0.2.0 /home/denic/.npm/e3aa172d-supports-color-0-2-0.lock
+454 silly gunzTarPerm extractEntry modern/internals/baseCreateCallback.js
+455 info install forever-agent@0.5.2
+456 info addNameTag [ 'ansi-styles', '^1.1.0' ]
+457 info addNameTag [ 'escape-string-regexp', '^1.0.0' ]
+458 info addNameTag [ 'has-ansi', '^0.1.0' ]
+459 info addNameTag [ 'strip-ansi', '^0.3.0' ]
+460 info addNameTag [ 'supports-color', '^0.2.0' ]
+461 info postinstall forever-agent@0.5.2
+462 verbose url raw has-ansi
+463 verbose url resolving [ 'http://registry.npmjs.org/', './has-ansi' ]
+464 verbose url resolved http://registry.npmjs.org/has-ansi
+465 info retry registry request attempt 1 at 12:40:18
+466 verbose etag "2I8RDBNDGLCZT732CCHKVJUKJ"
+467 http GET http://registry.npmjs.org/has-ansi
+468 verbose url raw supports-color
+469 verbose url resolving [ 'http://registry.npmjs.org/', './supports-color' ]
+470 verbose url resolved http://registry.npmjs.org/supports-color
+471 info retry registry request attempt 1 at 12:40:18
+472 verbose etag "1MM1J77ID5VCTH4K3PHOT4XZI"
+473 http GET http://registry.npmjs.org/supports-color
+474 verbose url raw strip-ansi
+475 verbose url resolving [ 'http://registry.npmjs.org/', './strip-ansi' ]
+476 verbose url resolved http://registry.npmjs.org/strip-ansi
+477 info retry registry request attempt 1 at 12:40:18
+478 verbose etag "75LHXYTAYHSVGUDAKW4Q6NTZR"
+479 http GET http://registry.npmjs.org/strip-ansi
+480 verbose url raw escape-string-regexp
+481 verbose url resolving [ 'http://registry.npmjs.org/', './escape-string-regexp' ]
+482 verbose url resolved http://registry.npmjs.org/escape-string-regexp
+483 info retry registry request attempt 1 at 12:40:18
+484 verbose etag "EMIN7LOE22KESR5DOWJRB8ACW"
+485 http GET http://registry.npmjs.org/escape-string-regexp
+486 verbose url raw ansi-styles
+487 verbose url resolving [ 'http://registry.npmjs.org/', './ansi-styles' ]
+488 verbose url resolved http://registry.npmjs.org/ansi-styles
+489 info retry registry request attempt 1 at 12:40:18
+490 verbose etag "89BTWDCZ6UUTTX6GL9L0IKRTG"
+491 http GET http://registry.npmjs.org/ansi-styles
+492 silly gunzTarPerm extractEntry modern/internals/reInterpolate.js
+493 silly gunzTarPerm extractEntry modern/internals/htmlUnescapes.js
+494 silly gunzTarPerm extractEntry js/zalgo/es5.js
+495 silly gunzTarPerm extractEntry modern/internals/maxPoolSize.js
+496 silly gunzTarPerm extractEntry modern/internals/baseCreateWrapper.js
+497 silly gunzTarPerm extractEntry modern/internals/baseMerge.js
+498 silly gunzTarPerm extractEntry modern/internals/escapeStringChar.js
+499 silly gunzTarPerm extractEntry modern/internals/createCache.js
+500 silly gunzTarPerm extractEntry modern/internals/getArray.js
+501 silly gunzTarPerm extractEntry modern/internals/shimIsPlainObject.js
+502 silly gunzTarPerm extractEntry modern/internals/objectPool.js
+503 silly gunzTarPerm extractEntry modern/internals/baseFlatten.js
+504 silly gunzTarPerm extractEntry modern/internals/baseCreate.js
+505 silly gunzTarPerm extractEntry modern/internals/baseIndexOf.js
+506 silly gunzTarPerm extractEntry modern/internals/cachePush.js
+507 silly gunzTarPerm extractEntry modern/internals/releaseArray.js
+508 silly gunzTarPerm extractEntry modern/internals/isNative.js
+509 silly gunzTarPerm extractEntry modern/utilities/identity.js
+510 silly gunzTarPerm extractEntry modern/utilities/template.js
+511 silly gunzTarPerm extractEntry modern/utilities/uniqueId.js
+512 silly gunzTarPerm extractEntry modern/utilities/property.js
+513 silly gunzTarPerm extractEntry modern/utilities/now.js
+514 silly gunzTarPerm extractEntry modern/utilities/mixin.js
+515 silly gunzTarPerm extractEntry modern/utilities/escape.js
+516 silly gunzTarPerm extractEntry modern/utilities/parseInt.js
+517 silly gunzTarPerm extractEntry modern/utilities/unescape.js
+518 silly gunzTarPerm extractEntry modern/utilities/templateSettings.js
+519 silly gunzTarPerm extractEntry modern/utilities/constant.js
+520 silly gunzTarPerm extractEntry modern/utilities/noConflict.js
+521 silly gunzTarPerm extractEntry modern/utilities/times.js
+522 silly gunzTarPerm extractEntry modern/utilities/noop.js
+523 silly gunzTarPerm extractEntry modern/utilities/random.js
+524 silly gunzTarPerm extractEntry modern/utilities/result.js
+525 silly gunzTarPerm extractEntry modern/objects/forInRight.js
+526 silly gunzTarPerm extractEntry modern/objects/isDate.js
+527 silly gunzTarPerm extractEntry modern/objects/isFinite.js
+528 silly gunzTarPerm extractEntry modern/objects/isPlainObject.js
+529 silly gunzTarPerm extractEntry modern/objects/merge.js
+530 silly gunzTarPerm extractEntry modern/objects/isNumber.js
+531 silly gunzTarPerm extractEntry modern/objects/isObject.js
+532 silly gunzTarPerm extractEntry modern/objects/transform.js
+533 silly gunzTarPerm extractEntry modern/objects/isString.js
+534 silly gunzTarPerm extractEntry modern/objects/values.js
+535 silly gunzTarPerm extractEntry modern/objects/isArray.js
+536 silly gunzTarPerm extractEntry modern/objects/isEmpty.js
+537 silly gunzTarPerm extractEntry modern/objects/cloneDeep.js
+538 silly gunzTarPerm extractEntry modern/objects/invert.js
+539 silly gunzTarPerm extractEntry modern/objects/isNull.js
+540 silly gunzTarPerm extractEntry modern/objects/isArguments.js
+541 silly gunzTarPerm extractEntry modern/objects/defaults.js
+542 silly gunzTarPerm extractEntry modern/objects/pairs.js
+543 silly gunzTarPerm extractEntry modern/objects/isBoolean.js
+544 silly gunzTarPerm extractEntry modern/objects/assign.js
+545 silly gunzTarPerm extractEntry modern/objects/isNaN.js
+546 silly gunzTarPerm extractEntry modern/objects/pick.js
+547 silly gunzTarPerm extractEntry modern/objects/has.js
+548 silly gunzTarPerm extractEntry modern/objects/isUndefined.js
+549 silly gunzTarPerm extractEntry modern/objects/isFunction.js
+550 silly gunzTarPerm extractEntry modern/objects/create.js
+551 silly gunzTarPerm extractEntry modern/objects/mapValues.js
+552 silly gunzTarPerm extractEntry modern/objects/forOwnRight.js
+553 silly gunzTarPerm extractEntry modern/objects/functions.js
+554 silly gunzTarPerm extractEntry modern/objects/clone.js
+555 silly gunzTarPerm extractEntry modern/objects/omit.js
+556 silly gunzTarPerm extractEntry modern/objects/findKey.js
+557 silly gunzTarPerm extractEntry modern/objects/keys.js
+558 silly gunzTarPerm extractEntry modern/objects/isElement.js
+559 silly gunzTarPerm extractEntry modern/objects/isEqual.js
+560 silly gunzTarPerm extractEntry modern/objects/isRegExp.js
+561 silly gunzTarPerm extractEntry modern/objects/forOwn.js
+562 silly gunzTarPerm extractEntry modern/objects/findLastKey.js
+563 silly gunzTarPerm extractEntry modern/objects/forIn.js
+564 silly gunzTarPerm extractEntry modern/chaining/tap.js
+565 silly gunzTarPerm extractEntry modern/chaining/chain.js
+566 silly gunzTarPerm extractEntry modern/chaining/wrapperValueOf.js
+567 silly gunzTarPerm extractEntry modern/chaining/wrapperToString.js
+568 silly gunzTarPerm extractEntry modern/chaining/wrapperChain.js
+569 silly gunzTarPerm extractEntry modern/collections/toArray.js
+570 silly gunzTarPerm extractEntry modern/collections/some.js
+571 silly gunzTarPerm extractEntry modern/collections/reduceRight.js
+572 silly gunzTarPerm extractEntry modern/collections/reject.js
+573 silly gunzTarPerm extractEntry modern/collections/map.js
+574 silly gunzTarPerm extractEntry modern/collections/where.js
+575 silly gunzTarPerm extractEntry modern/collections/reduce.js
+576 silly gunzTarPerm extractEntry modern/collections/shuffle.js
+577 silly gunzTarPerm extractEntry modern/collections/size.js
+578 silly gunzTarPerm extractEntry modern/collections/max.js
+579 silly gunzTarPerm extractEntry modern/collections/findLast.js
+580 silly gunzTarPerm extractEntry modern/collections/every.js
+581 silly gunzTarPerm extractEntry modern/collections/filter.js
+582 silly gunzTarPerm extractEntry modern/collections/find.js
+583 silly gunzTarPerm extractEntry modern/collections/sortBy.js
+584 silly gunzTarPerm extractEntry modern/collections/forEach.js
+585 silly gunzTarPerm extractEntry modern/collections/countBy.js
+586 silly gunzTarPerm extractEntry modern/collections/pluck.js
+587 silly gunzTarPerm extractEntry modern/collections/forEachRight.js
+588 silly gunzTarPerm extractEntry modern/collections/indexBy.js
+589 silly gunzTarPerm extractEntry modern/collections/groupBy.js
+590 silly gunzTarPerm extractEntry modern/collections/invoke.js
+591 silly gunzTarPerm extractEntry modern/collections/sample.js
+592 silly gunzTarPerm extractEntry modern/collections/min.js
+593 silly gunzTarPerm extractEntry modern/collections/contains.js
+594 silly gunzTarPerm extractEntry modern/collections/at.js
+595 silly gunzTarPerm extractEntry modern/arrays/sortedIndex.js
+596 silly gunzTarPerm extractEntry modern/arrays/zipObject.js
+597 silly gunzTarPerm extractEntry modern/arrays/initial.js
+598 silly gunzTarPerm extractEntry modern/arrays/remove.js
+599 silly gunzTarPerm extractEntry modern/arrays/findIndex.js
+600 silly gunzTarPerm extractEntry modern/arrays/zip.js
+601 silly gunzTarPerm extractEntry modern/arrays/without.js
+602 silly gunzTarPerm extractEntry modern/arrays/intersection.js
+603 silly gunzTarPerm extractEntry modern/arrays/indexOf.js
+604 silly gunzTarPerm extractEntry modern/arrays/range.js
+605 silly gunzTarPerm extractEntry modern/arrays/rest.js
+606 silly gunzTarPerm extractEntry modern/arrays/xor.js
+607 silly gunzTarPerm extractEntry modern/arrays/findLastIndex.js
+608 silly gunzTarPerm extractEntry modern/arrays/flatten.js
+609 silly gunzTarPerm extractEntry modern/arrays/last.js
+610 silly gunzTarPerm extractEntry modern/arrays/first.js
+611 silly gunzTarPerm extractEntry modern/arrays/uniq.js
+612 silly gunzTarPerm extractEntry modern/arrays/difference.js
+613 silly gunzTarPerm extractEntry modern/arrays/union.js
+614 silly gunzTarPerm extractEntry modern/arrays/lastIndexOf.js
+615 silly gunzTarPerm extractEntry modern/arrays/compact.js
+616 silly gunzTarPerm extractEntry modern/arrays/pull.js
+617 silly gunzTarPerm extractEntry LICENSE.txt
+618 silly gunzTarPerm extractEntry underscore/objects.js
+619 silly gunzTarPerm extractEntry underscore/arrays.js
+620 silly gunzTarPerm extractEntry underscore/index.js
+621 silly gunzTarPerm extractEntry underscore/chaining.js
+622 silly gunzTarPerm extractEntry underscore/collections.js
+623 silly gunzTarPerm extractEntry underscore/utilities.js
+624 silly gunzTarPerm extractEntry underscore/functions.js
+625 silly gunzTarPerm extractEntry underscore/support.js
+626 silly gunzTarPerm extractEntry underscore/functions/bindAll.js
+627 silly gunzTarPerm extractEntry underscore/functions/delay.js
+628 silly gunzTarPerm extractEntry underscore/functions/defer.js
+629 silly gunzTarPerm extractEntry underscore/functions/memoize.js
+630 silly gunzTarPerm extractEntry underscore/functions/after.js
+631 silly gunzTarPerm extractEntry underscore/functions/wrap.js
+632 silly gunzTarPerm extractEntry underscore/functions/compose.js
+633 silly gunzTarPerm extractEntry underscore/functions/once.js
+634 silly gunzTarPerm extractEntry underscore/functions/throttle.js
+635 silly gunzTarPerm extractEntry underscore/functions/partial.js
+636 silly gunzTarPerm extractEntry underscore/functions/debounce.js
+637 silly gunzTarPerm extractEntry underscore/functions/bind.js
+638 silly gunzTarPerm extractEntry underscore/functions/createCallback.js
+639 silly gunzTarPerm extractEntry underscore/internals/baseCreate.js
+640 silly gunzTarPerm extractEntry underscore/internals/baseRandom.js
+641 silly gunzTarPerm extractEntry underscore/internals/escapeHtmlChar.js
+642 silly gunzTarPerm extractEntry underscore/internals/objectTypes.js
+643 silly gunzTarPerm extractEntry underscore/internals/slice.js
+644 silly gunzTarPerm extractEntry underscore/internals/reUnescapedHtml.js
+645 silly gunzTarPerm extractEntry underscore/internals/baseIsEqual.js
+646 silly gunzTarPerm extractEntry underscore/internals/lodashWrapper.js
+647 silly gunzTarPerm extractEntry underscore/internals/compareAscending.js
+648 silly gunzTarPerm extractEntry underscore/internals/reEscapedHtml.js
+649 silly gunzTarPerm extractEntry underscore/internals/keyPrefix.js
+650 silly gunzTarPerm extractEntry underscore/internals/createAggregator.js
+651 silly gunzTarPerm extractEntry underscore/internals/htmlEscapes.js
+652 silly gunzTarPerm extractEntry underscore/internals/createWrapper.js
+653 silly gunzTarPerm extractEntry underscore/internals/baseDifference.js
+654 silly gunzTarPerm extractEntry underscore/internals/unescapeHtmlChar.js
+655 silly gunzTarPerm extractEntry underscore/internals/shimKeys.js
+656 silly gunzTarPerm extractEntry underscore/internals/baseCreateCallback.js
+657 silly gunzTarPerm extractEntry underscore/internals/baseUniq.js
+658 silly gunzTarPerm extractEntry underscore/internals/htmlUnescapes.js
+659 silly gunzTarPerm extractEntry underscore/internals/baseBind.js
+660 silly gunzTarPerm extractEntry underscore/internals/baseCreateWrapper.js
+661 silly gunzTarPerm extractEntry underscore/internals/reInterpolate.js
+662 silly gunzTarPerm extractEntry underscore/internals/escapeStringChar.js
+663 silly gunzTarPerm extractEntry underscore/internals/baseFlatten.js
+664 silly gunzTarPerm extractEntry underscore/internals/indicatorObject.js
+665 silly gunzTarPerm extractEntry underscore/internals/baseIndexOf.js
+666 silly gunzTarPerm extractEntry underscore/internals/isNative.js
+667 silly gunzTarPerm extractEntry underscore/utilities/identity.js
+668 silly gunzTarPerm extractEntry underscore/utilities/mixin.js
+669 silly gunzTarPerm extractEntry underscore/utilities/template.js
+670 silly gunzTarPerm extractEntry underscore/utilities/uniqueId.js
+671 silly gunzTarPerm extractEntry underscore/utilities/property.js
+672 silly gunzTarPerm extractEntry underscore/utilities/noConflict.js
+673 silly gunzTarPerm extractEntry underscore/utilities/result.js
+674 silly gunzTarPerm extractEntry underscore/utilities/escape.js
+675 silly gunzTarPerm extractEntry underscore/utilities/unescape.js
+676 silly gunzTarPerm extractEntry underscore/utilities/templateSettings.js
+677 silly gunzTarPerm extractEntry underscore/utilities/times.js
+678 silly gunzTarPerm extractEntry underscore/utilities/noop.js
+679 silly gunzTarPerm extractEntry underscore/utilities/random.js
+680 silly gunzTarPerm extractEntry underscore/utilities/now.js
+681 silly gunzTarPerm extractEntry underscore/objects/forOwn.js
+682 silly gunzTarPerm extractEntry underscore/objects/isArray.js
+683 silly gunzTarPerm extractEntry underscore/objects/isDate.js
+684 silly gunzTarPerm extractEntry underscore/objects/isFinite.js
+685 silly gunzTarPerm extractEntry underscore/objects/isNull.js
+686 silly gunzTarPerm extractEntry underscore/objects/isNumber.js
+687 silly gunzTarPerm extractEntry underscore/objects/isObject.js
+688 silly gunzTarPerm extractEntry underscore/objects/isString.js
+689 silly gunzTarPerm extractEntry underscore/objects/values.js
+690 silly gunzTarPerm extractEntry underscore/objects/isEmpty.js
+691 silly gunzTarPerm extractEntry underscore/objects/defaults.js
+692 silly gunzTarPerm extractEntry underscore/objects/invert.js
+693 silly gunzTarPerm extractEntry underscore/objects/isBoolean.js
+694 silly gunzTarPerm extractEntry underscore/objects/isArguments.js
+695 silly gunzTarPerm extractEntry underscore/objects/isNaN.js
+696 silly gunzTarPerm extractEntry underscore/objects/pairs.js
+697 silly gunzTarPerm extractEntry underscore/objects/has.js
+698 silly gunzTarPerm extractEntry underscore/objects/assign.js
+699 silly gunzTarPerm extractEntry underscore/objects/isFunction.js
+700 silly gunzTarPerm extractEntry underscore/objects/pick.js
+701 silly gunzTarPerm extractEntry underscore/objects/functions.js
+702 silly gunzTarPerm extractEntry underscore/objects/isUndefined.js
+703 silly gunzTarPerm extractEntry underscore/objects/omit.js
+704 silly gunzTarPerm extractEntry underscore/objects/clone.js
+705 silly gunzTarPerm extractEntry underscore/objects/keys.js
+706 silly gunzTarPerm extractEntry underscore/objects/isElement.js
+707 silly gunzTarPerm extractEntry underscore/objects/isEqual.js
+708 silly gunzTarPerm extractEntry underscore/objects/isRegExp.js
+709 silly gunzTarPerm extractEntry underscore/objects/forIn.js
+710 silly gunzTarPerm extractEntry underscore/chaining/tap.js
+711 silly gunzTarPerm extractEntry underscore/chaining/chain.js
+712 silly gunzTarPerm extractEntry underscore/chaining/wrapperValueOf.js
+713 silly gunzTarPerm extractEntry underscore/chaining/wrapperChain.js
+714 silly gunzTarPerm extractEntry underscore/collections/toArray.js
+715 silly gunzTarPerm extractEntry underscore/collections/some.js
+716 silly gunzTarPerm extractEntry underscore/collections/reduceRight.js
+717 silly gunzTarPerm extractEntry underscore/collections/reject.js
+718 silly gunzTarPerm extractEntry underscore/collections/where.js
+719 silly gunzTarPerm extractEntry underscore/collections/reduce.js
+720 silly gunzTarPerm extractEntry underscore/collections/shuffle.js
+721 silly gunzTarPerm extractEntry underscore/collections/size.js
+722 silly gunzTarPerm extractEntry underscore/collections/max.js
+723 silly gunzTarPerm extractEntry underscore/collections/findWhere.js
+724 silly gunzTarPerm extractEntry underscore/collections/every.js
+725 silly gunzTarPerm extractEntry underscore/collections/filter.js
+726 silly gunzTarPerm extractEntry underscore/collections/find.js
+727 silly gunzTarPerm extractEntry underscore/collections/sortBy.js
+728 silly gunzTarPerm extractEntry underscore/collections/forEach.js
+729 silly gunzTarPerm extractEntry underscore/collections/countBy.js
+730 silly gunzTarPerm extractEntry underscore/collections/pluck.js
+731 silly gunzTarPerm extractEntry underscore/collections/forEachRight.js
+732 silly gunzTarPerm extractEntry underscore/collections/indexBy.js
+733 silly gunzTarPerm extractEntry underscore/collections/groupBy.js
+734 silly gunzTarPerm extractEntry underscore/collections/invoke.js
+735 silly gunzTarPerm extractEntry underscore/collections/sample.js
+736 silly gunzTarPerm extractEntry underscore/collections/min.js
+737 silly gunzTarPerm extractEntry underscore/collections/contains.js
+738 silly gunzTarPerm extractEntry underscore/collections/map.js
+739 silly gunzTarPerm extractEntry underscore/arrays/sortedIndex.js
+740 silly gunzTarPerm extractEntry underscore/arrays/zip.js
+741 silly gunzTarPerm extractEntry underscore/arrays/zipObject.js
+742 silly gunzTarPerm extractEntry underscore/arrays/initial.js
+743 silly gunzTarPerm extractEntry underscore/arrays/flatten.js
+744 silly gunzTarPerm extractEntry underscore/arrays/intersection.js
+745 silly gunzTarPerm extractEntry underscore/arrays/indexOf.js
+746 silly gunzTarPerm extractEntry underscore/arrays/range.js
+747 silly gunzTarPerm extractEntry underscore/arrays/rest.js
+748 silly gunzTarPerm extractEntry underscore/arrays/last.js
+749 silly gunzTarPerm extractEntry underscore/arrays/first.js
+750 silly gunzTarPerm extractEntry underscore/arrays/uniq.js
+751 silly gunzTarPerm extractEntry underscore/arrays/difference.js
+752 silly gunzTarPerm extractEntry underscore/arrays/union.js
+753 silly gunzTarPerm extractEntry underscore/arrays/lastIndexOf.js
+754 silly gunzTarPerm extractEntry underscore/arrays/compact.js
+755 silly gunzTarPerm extractEntry underscore/arrays/without.js
+756 silly gunzTarPerm extractEntry compat/objects.js
+757 silly gunzTarPerm extractEntry compat/arrays.js
+758 silly gunzTarPerm extractEntry compat/index.js
+759 silly gunzTarPerm extractEntry compat/chaining.js
+760 silly gunzTarPerm extractEntry compat/collections.js
+761 silly gunzTarPerm extractEntry compat/utilities.js
+762 silly gunzTarPerm extractEntry compat/functions.js
+763 silly gunzTarPerm extractEntry compat/support.js
+764 silly gunzTarPerm extractEntry compat/functions/bindAll.js
+765 silly gunzTarPerm extractEntry compat/functions/delay.js
+766 silly gunzTarPerm extractEntry compat/functions/defer.js
+767 silly gunzTarPerm extractEntry compat/functions/memoize.js
+768 silly gunzTarPerm extractEntry compat/functions/createCallback.js
+769 silly gunzTarPerm extractEntry compat/functions/curry.js
+770 silly gunzTarPerm extractEntry compat/functions/partialRight.js
+771 silly gunzTarPerm extractEntry compat/functions/compose.js
+772 silly gunzTarPerm extractEntry compat/functions/once.js
+773 silly gunzTarPerm extractEntry compat/functions/bindKey.js
+774 silly gunzTarPerm extractEntry compat/functions/throttle.js
+775 silly gunzTarPerm extractEntry compat/functions/after.js
+776 silly gunzTarPerm extractEntry compat/functions/partial.js
+777 silly gunzTarPerm extractEntry compat/functions/debounce.js
+778 silly gunzTarPerm extractEntry compat/functions/bind.js
+779 silly gunzTarPerm extractEntry compat/functions/wrap.js
+780 silly gunzTarPerm extractEntry compat/internals/baseClone.js
+781 silly gunzTarPerm extractEntry compat/internals/slice.js
+782 silly gunzTarPerm extractEntry compat/internals/cacheIndexOf.js
+783 silly gunzTarPerm extractEntry compat/internals/isNative.js
+784 silly gunzTarPerm extractEntry compat/internals/charAtCallback.js
+785 silly gunzTarPerm extractEntry compat/internals/lodashWrapper.js
+786 silly gunzTarPerm extractEntry compat/internals/compareAscending.js
+787 silly gunzTarPerm extractEntry compat/internals/defaultsIteratorOptions.js
+788 silly gunzTarPerm extractEntry compat/internals/getObject.js
+789 silly gunzTarPerm extractEntry compat/internals/reEscapedHtml.js
+790 silly gunzTarPerm extractEntry compat/internals/objectTypes.js
+791 silly gunzTarPerm extractEntry compat/internals/keyPrefix.js
+792 silly gunzTarPerm extractEntry compat/internals/escapeHtmlChar.js
+793 silly gunzTarPerm extractEntry compat/internals/htmlEscapes.js
+794 silly gunzTarPerm extractEntry compat/internals/baseRandom.js
+795 silly gunzTarPerm extractEntry compat/internals/largeArraySize.js
+796 silly gunzTarPerm extractEntry compat/internals/reUnescapedHtml.js
+797 silly gunzTarPerm extractEntry compat/internals/createIterator.js
+798 silly gunzTarPerm extractEntry compat/internals/createAggregator.js
+799 silly gunzTarPerm extractEntry compat/internals/baseDifference.js
+800 silly gunzTarPerm extractEntry compat/internals/createWrapper.js
+801 silly gunzTarPerm extractEntry compat/internals/shimKeys.js
+802 silly gunzTarPerm extractEntry compat/internals/unescapeHtmlChar.js
+803 silly gunzTarPerm extractEntry compat/internals/arrayPool.js
+804 silly gunzTarPerm extractEntry compat/internals/releaseObject.js
+805 silly gunzTarPerm extractEntry compat/internals/baseUniq.js
+806 silly gunzTarPerm extractEntry compat/internals/setBindData.js
+807 silly gunzTarPerm extractEntry compat/internals/baseBind.js
+808 silly gunzTarPerm extractEntry compat/internals/baseCreateCallback.js
+809 silly gunzTarPerm extractEntry compat/internals/reInterpolate.js
+810 silly gunzTarPerm extractEntry compat/internals/htmlUnescapes.js
+811 silly gunzTarPerm extractEntry compat/internals/maxPoolSize.js
+812 silly gunzTarPerm extractEntry compat/internals/baseCreateWrapper.js
+813 silly gunzTarPerm extractEntry compat/internals/baseMerge.js
+814 silly gunzTarPerm extractEntry compat/internals/escapeStringChar.js
+815 silly gunzTarPerm extractEntry compat/internals/eachIteratorOptions.js
+816 silly gunzTarPerm extractEntry compat/internals/getArray.js
+817 silly gunzTarPerm extractEntry compat/internals/baseEach.js
+818 silly gunzTarPerm extractEntry compat/internals/forOwnIteratorOptions.js
+819 silly gunzTarPerm extractEntry compat/internals/createCache.js
+820 silly gunzTarPerm extractEntry compat/internals/indicatorObject.js
+821 silly gunzTarPerm extractEntry compat/internals/shimIsPlainObject.js
+822 silly gunzTarPerm extractEntry compat/internals/objectPool.js
+823 silly gunzTarPerm extractEntry compat/internals/isNode.js
+824 silly gunzTarPerm extractEntry compat/internals/baseCreate.js
+825 silly gunzTarPerm extractEntry compat/internals/baseFlatten.js
+826 silly gunzTarPerm extractEntry compat/internals/cachePush.js
+827 silly gunzTarPerm extractEntry compat/internals/baseIndexOf.js
+828 silly gunzTarPerm extractEntry compat/internals/iteratorTemplate.js
+829 silly gunzTarPerm extractEntry compat/internals/releaseArray.js
+830 silly gunzTarPerm extractEntry compat/internals/baseIsEqual.js
+831 silly gunzTarPerm extractEntry compat/utilities/identity.js
+832 http 304 http://registry.npmjs.org/escape-string-regexp
+833 silly registry.get cb [ 304,
+833 silly registry.get   { date: 'Thu, 09 Oct 2014 08:40:19 GMT',
+833 silly registry.get     via: '1.1 varnish',
+833 silly registry.get     'last-modified': 'Thu, 09 Oct 2014 08:40:19 GMT',
+833 silly registry.get     'cache-control': 'max-age=60',
+833 silly registry.get     etag: '"EMIN7LOE22KESR5DOWJRB8ACW"',
+833 silly registry.get     connection: 'keep-alive',
+833 silly registry.get     'x-served-by': 'cache-lcy1132-LCY',
+833 silly registry.get     'x-cache': 'HIT',
+833 silly registry.get     'x-cache-hits': '1',
+833 silly registry.get     'x-timer': 'S1412844019.132153,VS0,VE0',
+833 silly registry.get     vary: 'Accept' } ]
+834 verbose etag escape-string-regexp from cache
+835 http 304 http://registry.npmjs.org/has-ansi
+836 silly registry.get cb [ 304,
+836 silly registry.get   { date: 'Thu, 09 Oct 2014 08:40:19 GMT',
+836 silly registry.get     via: '1.1 varnish',
+836 silly registry.get     'last-modified': 'Thu, 09 Oct 2014 08:40:19 GMT',
+836 silly registry.get     'cache-control': 'max-age=60',
+836 silly registry.get     etag: '"2I8RDBNDGLCZT732CCHKVJUKJ"',
+836 silly registry.get     connection: 'keep-alive',
+836 silly registry.get     'x-served-by': 'cache-lcy1132-LCY',
+836 silly registry.get     'x-cache': 'HIT',
+836 silly registry.get     'x-cache-hits': '1',
+836 silly registry.get     'x-timer': 'S1412844019.128388,VS0,VE0',
+836 silly registry.get     vary: 'Accept' } ]
+837 verbose etag has-ansi from cache
+838 http 304 http://registry.npmjs.org/strip-ansi
+839 silly registry.get cb [ 304,
+839 silly registry.get   { date: 'Thu, 09 Oct 2014 08:40:19 GMT',
+839 silly registry.get     via: '1.1 varnish',
+839 silly registry.get     'last-modified': 'Thu, 09 Oct 2014 08:40:19 GMT',
+839 silly registry.get     'cache-control': 'max-age=60',
+839 silly registry.get     etag: '"75LHXYTAYHSVGUDAKW4Q6NTZR"',
+839 silly registry.get     connection: 'keep-alive',
+839 silly registry.get     'x-served-by': 'cache-lcy1127-LCY',
+839 silly registry.get     'x-cache': 'HIT',
+839 silly registry.get     'x-cache-hits': '1',
+839 silly registry.get     'x-timer': 'S1412844019.128361,VS0,VE0',
+839 silly registry.get     vary: 'Accept' } ]
+840 verbose etag strip-ansi from cache
+841 http 304 http://registry.npmjs.org/supports-color
+842 silly registry.get cb [ 304,
+842 silly registry.get   { date: 'Thu, 09 Oct 2014 08:40:19 GMT',
+842 silly registry.get     via: '1.1 varnish',
+842 silly registry.get     'last-modified': 'Thu, 09 Oct 2014 08:40:19 GMT',
+842 silly registry.get     'cache-control': 'max-age=60',
+842 silly registry.get     etag: '"1MM1J77ID5VCTH4K3PHOT4XZI"',
+842 silly registry.get     connection: 'keep-alive',
+842 silly registry.get     'x-served-by': 'cache-lcy1131-LCY',
+842 silly registry.get     'x-cache': 'HIT',
+842 silly registry.get     'x-cache-hits': '1',
+842 silly registry.get     'x-timer': 'S1412844019.128495,VS0,VE0',
+842 silly registry.get     vary: 'Accept' } ]
+843 verbose etag supports-color from cache
+844 silly gunzTarPerm extractEntry compat/utilities/template.js
+845 silly gunzTarPerm extractEntry compat/utilities/uniqueId.js
+846 silly lockFile 67e902d7-has-ansi-0-1-0 has-ansi@^0.1.0
+847 silly lockFile 3a64cb31-strip-ansi-0-3-0 strip-ansi@^0.3.0
+848 silly lockFile e3aa172d-supports-color-0-2-0 supports-color@^0.2.0
+849 silly lockFile 9f5f1582-escape-string-regexp-1-0-0 escape-string-regexp@^1.0.0
+850 silly gunzTarPerm extractEntry compat/utilities/property.js
+851 verbose about to build /usr/local/lib/node_modules/elasticsearch/node_modules/chalk
+852 info /usr/local/lib/node_modules/elasticsearch/node_modules/chalk unbuild
+853 verbose from cache /usr/local/lib/node_modules/elasticsearch/node_modules/chalk/package.json
+854 silly gunzTarPerm extractEntry compat/utilities/now.js
+855 silly gunzTarPerm extractEntry compat/utilities/mixin.js
+856 info preuninstall chalk@0.5.1
+857 silly gunzTarPerm extractEntry compat/utilities/escape.js
+858 silly gunzTarPerm extractEntry compat/utilities/parseInt.js
+859 info uninstall chalk@0.5.1
+860 silly gunzTarPerm extractEntry compat/utilities/unescape.js
+861 silly gunzTarPerm extractEntry compat/utilities/templateSettings.js
+862 verbose false,/usr/local/lib/node_modules,/usr/local/lib/node_modules/elasticsearch/node_modules unbuild chalk@0.5.1
+863 info postuninstall chalk@0.5.1
+864 silly gunzTarPerm extractEntry compat/utilities/constant.js
+865 silly gunzTarPerm extractEntry compat/utilities/noConflict.js
+866 verbose about to build /usr/local/lib/node_modules/elasticsearch
+867 info /usr/local/lib/node_modules/elasticsearch unbuild
+868 verbose from cache /usr/local/lib/node_modules/elasticsearch/package.json
+869 silly gunzTarPerm extractEntry compat/utilities/times.js
+870 silly gunzTarPerm extractEntry compat/utilities/noop.js
+871 silly gunzTarPerm extractEntry compat/utilities/random.js
+872 silly gunzTarPerm extractEntry compat/utilities/result.js
+873 silly gunzTarPerm extractEntry compat/objects/forInRight.js
+874 silly gunzTarPerm extractEntry compat/objects/isDate.js
+875 info preuninstall elasticsearch@2.4.3
+876 http 304 http://registry.npmjs.org/ansi-styles
+877 silly registry.get cb [ 304,
+877 silly registry.get   { date: 'Thu, 09 Oct 2014 08:40:19 GMT',
+877 silly registry.get     via: '1.1 varnish',
+877 silly registry.get     'last-modified': 'Thu, 09 Oct 2014 08:40:19 GMT',
+877 silly registry.get     'cache-control': 'max-age=60',
+877 silly registry.get     etag: '"89BTWDCZ6UUTTX6GL9L0IKRTG"',
+877 silly registry.get     connection: 'keep-alive',
+877 silly registry.get     'x-served-by': 'cache-lcy1127-LCY',
+877 silly registry.get     'x-cache': 'HIT',
+877 silly registry.get     'x-cache-hits': '1',
+877 silly registry.get     'x-timer': 'S1412844019.142670,VS0,VE0',
+877 silly registry.get     vary: 'Accept' } ]
+878 verbose etag ansi-styles from cache
+879 silly gunzTarPerm extractEntry compat/objects/isFinite.js
+880 silly gunzTarPerm extractEntry compat/objects/isPlainObject.js
+881 info uninstall elasticsearch@2.4.3
+882 silly gunzTarPerm extractEntry compat/objects/merge.js
+883 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild elasticsearch@2.4.3
+884 info postuninstall elasticsearch@2.4.3
+885 silly lockFile f531fbfe-ansi-styles-1-1-0 ansi-styles@^1.1.0
+886 silly gunzTarPerm extractEntry compat/objects/isNumber.js
+887 silly gunzTarPerm extractEntry compat/objects/isObject.js
+888 silly gunzTarPerm extractEntry compat/objects/transform.js
+889 silly gunzTarPerm extractEntry compat/objects/isString.js
+890 error error rolling back Error: ENOTEMPTY, rmdir '/usr/local/lib/node_modules/elasticsearch/node_modules/lodash-node/modern/objects'
+890 error error rolling back  elasticsearch@2.4.3 { [Error: ENOTEMPTY, rmdir '/usr/local/lib/node_modules/elasticsearch/node_modules/lodash-node/modern/objects']
+890 error error rolling back   errno: 53,
+890 error error rolling back   code: 'ENOTEMPTY',
+890 error error rolling back   path: '/usr/local/lib/node_modules/elasticsearch/node_modules/lodash-node/modern/objects' }
+891 error Error: No compatible version found: has-ansi@'^0.1.0'
+891 error Valid install targets:
+891 error ["0.1.0","1.0.0"]
+891 error     at installTargetsError (/usr/local/lib/node_modules/npm/lib/cache.js:553:10)
+891 error     at /usr/local/lib/node_modules/npm/lib/cache.js:477:15
+891 error     at saved (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:138:7)
+891 error     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:220:7
+891 error     at Object.oncomplete (fs.js:297:15)
+892 error If you need help, you may report this log at:
+892 error     <http://github.com/isaacs/npm/issues>
+892 error or email it to:
+892 error     <npm-@googlegroups.com>
+893 error System Linux 3.13.0-32-generic
+894 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--save" "elasticsearch"
+895 error cwd /home/denic/web/laravel/node_scripts
+896 error node -v v0.8.8
+897 error npm -v 1.1.59
+898 verbose exit [ 1, true ]
