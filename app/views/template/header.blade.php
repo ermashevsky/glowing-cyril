@@ -491,7 +491,16 @@
                 var operator = $("#inputOperatorDescription").val();
                 var direction = $("#inputDirection").val();
 
-                spinner();
+                
+                
+                $('#myFindWindow .modal-dialog').waitMe({
+                    effect: 'win8',
+                    text: 'Данные готовятся. Пожалуйста, подождите.',
+                    bg: 'rgba(255,255,255,0.7)',
+                    color: '#428bca'
+                });
+                
+                
                 $.ajax({
                     url: '/findDireactionsData',
                     dataType: 'json',
@@ -565,7 +574,7 @@
 //                                        }
                             }
                         });
-                        $('#myModal .modal-dialog').waitMe("hide");
+                        //$('#myModal .modal-dialog').waitMe("hide");
                         console.timeEnd('test');
                     }
                 });
