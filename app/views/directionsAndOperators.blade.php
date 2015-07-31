@@ -24,9 +24,9 @@
                 </li>
             </ul>
             <div class="pull-right" style="margin-top:12px;">
-                <img src=<?php public_path();?>"img/logo-foot.png" />
-                <img src=<?php public_path();?>"img/MysqlLogo_32.png" />
-                <img src=<?php public_path();?>"img/PythonPowered.png" />
+                <img src=<?php public_path(); ?>"img/logo-foot.png" />
+                <img src=<?php public_path(); ?>"img/MysqlLogo_32.png" />
+                <img src=<?php public_path(); ?>"img/PythonPowered.png" />
             </div>
         </div>
     </div>
@@ -74,7 +74,7 @@
     <ul class="nav navbar-nav">
 
         <li style="margin:10px;">
-            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myFindWindow">
+            <button type="button" class="btn btn-warning" data-toggle="modal" id="findButton" data-target="#myFindWindow">
                 <i class="glyphicon glyphicon-search"> </i> Поиск
             </button>
         </li>
@@ -109,9 +109,19 @@
                             <label for="inputDirection">Направление</label>
                             <input type="text" class="form-control" id="inputDirection" placeholder="Введите наименование направления">
                         </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="strongParam"> Строгое соответствие
+                            </label>
+                        </div>
                         <div class="form-group">
                             <label for="inputOperatorDescription">Оператор</label>
                             <input type="text" class="form-control" id="inputOperatorDescription" placeholder="Введите наименование оператора">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="chkBoxQ931"> Отображать коды завершений
+                            </label>
                         </div>
                     </form>
                 </div>

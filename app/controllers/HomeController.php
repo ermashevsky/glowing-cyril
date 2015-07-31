@@ -28,7 +28,7 @@ class HomeController extends BaseController {
         $count_elements = count($ids['ids']);
 
         $rows = "";
-        
+
 
         $query2 = DB::select(DB::raw("SELECT * from tariffs where id IN (" . $comma_separated . ")"));
 
@@ -36,10 +36,10 @@ class HomeController extends BaseController {
         $rows .= "<table id='compareTable' class='table table-striped table-bordered table-condensed'>";
         $rows .= "<thead><tr>";
         $rows .= "<th>#</th><th>Код</th><th>Регион</th>";
-        
+
         $n = 1;
-        $k=1;
-        
+        $k = 1;
+
         foreach ($query2 as $column) {
             $rows .= "<th id=" . "column_" . $column->id . ">" . $column->description . "</th>";
         }
@@ -48,13 +48,13 @@ class HomeController extends BaseController {
         $rows .= "<tbody>";
 
 
-        
+
         foreach (DB::table('PhoneCode')->get() as $row) {
             $rows .= "<tr>";
             $rows .= "<td>" . $n++ . "</td>";
             $rows .= "<td>" . $row->PhoneCode . "</td>";
             $rows .= "<td>" . $row->Region . "</td>";
-            
+
             foreach ($query2 as $value) {
                 $rows .= "<td id=" . $value->id . "_" . $row->PhoneCode . "></td>";
             }
@@ -62,14 +62,14 @@ class HomeController extends BaseController {
             $query = DB::select(DB::raw("SELECT tariffs.id as id, prices.tariffs_id as tariffs_id, price FROM prices"
                                     . " join tariffs on tariffs.id = prices.tariffs_id"
                                     . " WHERE " . $row->PhoneCode . " LIKE CONCAT(  `code` ,  '%' ) AND  `tariffs_id` IN (" . $comma_separated . ") GROUP BY prices.tariffs_id ORDER BY code DESC LIMIT " . $count_elements));
-            
-            
+
+
             foreach ($query as $res) {
                 $dataContainer = array();
                 $dataContainer['id'] = $res->id;
                 $dataContainer['PhoneCode'] = $row->PhoneCode;
                 $dataContainer['price'] = $res->price;
-                $dataContainer['selector'] = $res->id."_".$row->PhoneCode;
+                $dataContainer['selector'] = $res->id . "_" . $row->PhoneCode;
                 $array_container[$k++] = $dataContainer;
             }
         }
@@ -348,48 +348,85 @@ class HomeController extends BaseController {
 
     function findDireactionsData() {
         $data = Input::all();
+        if ($data['chkBoxQ931'] == 0) {
 
-        $response = DB::table('Logs');
-        $response->select('Logs.id', 'Region', 'operator', DB::raw('COUNT( * ) AS call_count'), DB::raw('ROUND( ( SUM(  `ELAPSED-TIME` ) /60 ) , 2 ) AS minutes'), DB::raw('ROUND( SUM(  `ELAPSED-TIME` ) , 2 ) AS seconds'), DB::raw('SUM( CASE WHEN  `ELAPSED-TIME` >0 THEN 1  ELSE 0 END )  AS eltime_counter'));
-        $response->join('operators', 'operators.ip_address', '=', DB::raw('SUBSTRING_INDEX(  `Logs`.`DST-IP` ,  ":" , 1 )'));
-        $response->whereBetween('TIMESTAMP', array(date("Y-m-d H:i:s", strtotime($data["start_date"])), date("Y-m-d H:i:s", strtotime($data["end_date"]))));
-        if (strlen($data["operator"]) > 2) {
-            $response->where('operators.operator', 'LIKE', '%' . $data["operator"] . '%');
+            $response = DB::table('Logs');
+            $response->select('Logs.id', 'Region', 'operator', 'DISCONNECT-CODE-Q931 as disconnect_code_q931', DB::raw('COUNT( * ) AS call_count'), DB::raw('ROUND( ( SUM(  `ELAPSED-TIME` ) /60 ) , 2 ) AS minutes'), DB::raw('ROUND( SUM(  `ELAPSED-TIME` ) , 2 ) AS seconds'), DB::raw('SUM( CASE WHEN  `ELAPSED-TIME` >0 THEN 1  ELSE 0 END )  AS eltime_counter'), DB::raw('SUM(CASE WHEN `DISCONNECT-CODE-Q931` = 16 OR `DISCONNECT-CODE-Q931` = 17 OR `DISCONNECT-CODE-Q931` = 19 THEN 1 ELSE 0 END) AS count_16_17_19'));
+            $response->join('operators', 'operators.ip_address', '=', DB::raw('SUBSTRING_INDEX(  `Logs`.`DST-IP` ,  ":" , 1 )'));
+            $response->whereBetween('TIMESTAMP', array(date("Y-m-d H:i:s", strtotime($data["start_date"])), date("Y-m-d H:i:s", strtotime($data["end_date"]))));
+            if (strlen($data["operator"]) > 2) {
+                $response->where('operators.operator', 'LIKE', '%' . $data["operator"] . '%');
+            }
+            if (strlen($data["direction"]) > 2 && $data['strongParam'] == 0) {
+                $response->where('Region', 'LIKE', '%' . $data["direction"] . '%');
+            }
+            if (strlen($data["direction"]) > 2 && $data['strongParam'] == 1) {
+                $response->where('Region', $data["direction"]);
+            }
+            $response->groupBy('Region');
+            $response->groupBy('operator');
+            $response->having('minutes', '>', 0);
+            $rows = $response->get();
+        } else {
+            $response = DB::table('Logs');
+            $response->select('Logs.id', 'Region', 'operator', 'DISCONNECT-CODE-Q931 as disconnect_code_q931', DB::raw('COUNT( * ) AS call_count'), DB::raw('ROUND( ( SUM(  `ELAPSED-TIME` ) /60 ) , 2 ) AS minutes'), DB::raw('ROUND( SUM(  `ELAPSED-TIME` ) , 2 ) AS seconds'), DB::raw('SUM( CASE WHEN  `ELAPSED-TIME` >0 THEN 1  ELSE 0 END )  AS eltime_counter'));
+            $response->join('operators', 'operators.ip_address', '=', DB::raw('SUBSTRING_INDEX(  `Logs`.`DST-IP` ,  ":" , 1 )'));
+            $response->whereBetween('TIMESTAMP', array(date("Y-m-d H:i:s", strtotime($data["start_date"])), date("Y-m-d H:i:s", strtotime($data["end_date"]))));
+            if (strlen($data["operator"]) > 2) {
+                $response->where('operators.operator', 'LIKE', '%' . $data["operator"] . '%');
+            }
+            if (strlen($data["direction"]) > 2 && $data['strongParam'] == 0) {
+                $response->where('Region', 'LIKE', '%' . $data["direction"] . '%');
+            }
+            if (strlen($data["direction"]) > 2 && $data['strongParam'] == 1) {
+                $response->where('Region', $data["direction"]);
+            }
+            $response->groupBy('Region');
+            $response->groupBy('operator');
+            $response->groupBy('disconnect_code_q931');
+            //$response->having('minutes', '>', 0);
+            $rows = $response->get();
         }
-        if (strlen($data["direction"]) > 2) {
-            $response->where('Region', 'LIKE', '%' . $data["direction"] . '%');
-        }
-        $response->groupBy('Region');
-        $response->groupBy('operator');
-        $response->having('minutes', '>', 0);
-        $rows = $response->get();
-
         #print_r($response);
 
         $resultData = array();
         $n = 1;
         $eltime_counter = 1;
+        $count_16_17_19 = 1;
+
         foreach ($rows as $value) {
 
             $logsData = new HomeController();
 
+            if (isset($value->count_16_17_19)) {
+                $logsData->region = $value->Region;
+                $logsData->operator = $value->operator;
+                $logsData->call_count = $value->call_count;
+                $logsData->minutes = ceil($value->minutes);
+                $logsData->seconds = $value->seconds;
+                $logsData->eltime_counter = $value->eltime_counter;
+                $logsData->asr = round((($value->eltime_counter / $value->call_count) * 100), 2);
+                $logsData->asr_full_stat = round((($value->count_16_17_19 / $value->call_count) * 100), 2);
+                $logsData->q931_counter = $value->count_16_17_19;
+                $logsData->withCodes = 0;
 
-            $logsData->region = $value->Region;
-            $logsData->operator = $value->operator;
-            $logsData->call_count = $value->call_count;
-            $logsData->minutes = ceil($value->minutes);
-            $logsData->seconds = $value->seconds;
-            $logsData->eltime_counter = $value->eltime_counter;
-            $logsData->asr = round((($value->eltime_counter / $value->call_count) * 100), 2);
+                if ($value->eltime_counter > 0) {
 
-            if ($value->eltime_counter > 0) {
-
-                $logsData->acd = round(($value->seconds / $value->eltime_counter), 2);
+                    $logsData->acd = round(($value->seconds / $value->eltime_counter), 2);
+                } else {
+                    $logsData->acd = 0;
+                }
             } else {
-                $logsData->acd = 0;
+                
+                $logsData->region = $value->Region;
+                $logsData->operator = $value->operator;
+                $logsData->disconnect_code_q931 = $value->disconnect_code_q931;
+                $logsData->call_count = $value->call_count;
+                $logsData->minutes = ceil($value->minutes);
+                $logsData->seconds = $value->seconds;
+                $logsData->eltime_counter = $value->eltime_counter;
+                $logsData->withCodes = 1;
             }
-
-
 
             $resultData[$n++] = $logsData;
         }

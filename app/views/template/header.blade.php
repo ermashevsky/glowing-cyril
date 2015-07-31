@@ -17,7 +17,7 @@
         {{ HTML::script('js/jquery.autocomplete.min.js') }}
         {{ HTML::script('js/jquery.csv-0.71.js') }}
         {{ HTML::script('js/pnotify.core.js') }}
-        
+
         {{ HTML::style('css/bootstrap.css') }}
         {{ HTML::style('css/bootstrap-theme.css') }}
         {{ HTML::style('css/jquery.datetimepicker.css') }}
@@ -45,10 +45,10 @@
                     $.each(obj_data, function (i, val) {
                         // console.info(obj_data[i].selector);
                         // console.info(obj_data[i].price);
-                        if($.trim( $('td#' + obj_data[i].selector).text())){
+                        if ($.trim($('td#' + obj_data[i].selector).text())) {
                             $('td#' + obj_data[i].selector).css('background-color', 'red');
                         }
-                         
+
 
                         $('td#' + obj_data[i].selector).append(obj_data[i].price);
                     });
@@ -165,6 +165,9 @@
                         "sUrl": "js/russian-language-DataTables.txt"
                     }
                 });
+                $('#findButton').click(function () {
+                    $("#myFindWindow .modal-dialog").waitMe("hide");
+                });
 
                 //document.getElementById('saveButtonTariff').addEventListener('click', upload, false);
                 $("#saveButtonTariff").click(function () {
@@ -173,10 +176,10 @@
                     var ip_address = $("#ip_address").val();
 
                     if (fileName.lastIndexOf("csv") === fileName.length - 3) {
-                        
+
                         $("#saveButtonTariff").prop('disabled', true);
                         upload();
-                        
+
 
                     }
                     else
@@ -490,44 +493,76 @@
                 var end_date = $("#end_date").val();
                 var operator = $("#inputOperatorDescription").val();
                 var direction = $("#inputDirection").val();
+                var chkBoxQ931 = "";
+                var strongParam = "";
+                
+                if ($("#chkBoxQ931").is(":checked")) {
+                    chkBoxQ931 = 1;
+                } else {
+                    chkBoxQ931 = 0;
+                }
+                
+                if ($("#strongParam").is(":checked")) {
+                    strongParam = 1;
+                } else {
+                    strongParam = 0;
+                }
 
-                
-                
+
+
                 $('#myFindWindow .modal-dialog').waitMe({
                     effect: 'win8',
                     text: 'Данные готовятся. Пожалуйста, подождите.',
                     bg: 'rgba(255,255,255,0.7)',
                     color: '#428bca'
                 });
-                
-                
+
+
                 $.ajax({
                     url: '/findDireactionsData',
                     dataType: 'json',
                     type: 'post',
                     contentType: 'application/json',
                     data: JSON.stringify(
-                            {start_date: start_date, end_date: end_date, operator: operator, direction: direction}),
+                            {start_date: start_date, end_date: end_date, operator: operator, direction: direction, chkBoxQ931: chkBoxQ931, strongParam: strongParam}),
                     processData: false,
                     success: function (data, textStatus, jQxhr) {
-                        console.info(data);
-
+                        //console.info(data);
+                        //console.info(data[1].withCodes);
                         console.time('test');
-                        $("#directionBlockTable").append('<table class="table table-striped table-bordered table-condensed" id="directionTable">\n\
-                <thead><tr><th>№</th><th>Направление</th><th>Оператор</th><th>Кол-во минут</th><th>Кол-во звонков</th><th>Кол-во звонков > 0</th><th>ACD</th><th>ASR (%)</th></tr></thead>\n\
+                        if (data[1].withCodes === 1) {
+                            $("#directionBlockTable").append('<table class="table table-striped table-bordered table-condensed" id="directionTable">\n\
+                <thead><tr><th>№</th><th>Направление</th><th>Оператор</th><th>Q931</th><th>Минут</th><th>Звонков</th><th>Звонков > 0</th></tr></thead>\n\
                 <tbody></tbody></table>');
-                        $.each(data, function (i, val) {
-                            var acd_bgcolor = data[i].acd_bgcolor;
+                    $.each(data, function (i, val) {
 
-                            $("#directionTable").append('<tr><td>' + i + '</td><td>' + data[i].region + '</td><td>' + data[i].operator + '</td><td align="right">' + data[i].minutes + '</td><td align="right">'
-                                    + data[i].call_count + '</td><td align="right">' + data[i].eltime_counter + '</td><td align="right">' + data[i].acd + '</td><td align="right">' + data[i].asr + '</td></tr>');
+                                var acd_bgcolor = data[i].acd_bgcolor;
+
+                                $("#directionTable").append('<tr><td>' + i + '</td><td>' + data[i].region + '</td><td>' + data[i].operator + '</td><td align="right">' + data[i].disconnect_code_q931 + '</td><td align="right">' + data[i].minutes + '</td><td align="right">'
+                                        + data[i].call_count + '</td><td align="right">' + data[i].eltime_counter + '</td></tr>');
 
 
-                        });
+                            });
+                    $('#myFindWindow').modal('hide');
+                            console.log('ending:  ', (new Date() - startTime) / 1000);
+                        }
+                        if(data[1].withCodes === 0) {
+                            $("#directionBlockTable").append('<table class="table table-striped table-bordered table-condensed" id="directionTable">\n\
+                <thead><tr><th>№</th><th>Направление</th><th>Оператор</th><th>Кол-во минут</th><th>Кол-во звонков</th><th>Кол-во звонков > 0</th><th>ACD</th><th>ASR (%)</th><th>ASR Full(%)</th></tr></thead>\n\
+                <tbody></tbody></table>');
+                            $.each(data, function (i, val) {
 
-                        $('#myFindWindow').modal('hide');
-                        console.log('ending:  ', (new Date() - startTime) / 1000);
+                                var acd_bgcolor = data[i].acd_bgcolor;
 
+                                $("#directionTable").append('<tr><td>' + i + '</td><td>' + data[i].region + '</td><td>' + data[i].operator + '</td><td align="right">' + data[i].minutes + '</td><td align="right">'
+                                        + data[i].call_count + '</td><td align="right">' + data[i].eltime_counter + '</td><td align="right">' + data[i].acd + '</td><td align="right">' + data[i].asr + '</td><td align="right">' + data[i].asr_full_stat + '</td></tr>');
+
+
+                            });
+
+                            $('#myFindWindow').modal('hide');
+                            console.log('ending:  ', (new Date() - startTime) / 1000);
+                        }
                     },
                     error: function (jqXhr, textStatus, errorThrown) {
                         console.log(errorThrown);
